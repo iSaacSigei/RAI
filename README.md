@@ -39,20 +39,28 @@ To learn more about React, visit the official [React documentation](https://reac
 ```bash
 src/
 ├───components/
-│   ├───Admin/         # Admin-related components (future additions)
+│   ├───Admin/         # Admin-related components-------For blog and events updates
 │   └───Client/        # Client-side components
-│       ├───About.js       # About page
-│       ├───Blog.js        # Blog page
-│       ├───Contact.js     # Contact page
-│       ├───Events.js      # Events page
-│       ├───Home.js        # Home page
-│       ├───Navbar.js      # Navbar component
-│       ├───Resources.js   # Resources page
-│       ├───Services.js    # Services page
-│       └───Team.js        # Team page
+│       ├───About.js       # Gideon - About page
+│       ├───Blog.js        # To be decided later
+│       ├───Contact.js     # Gideon - Contact page
+│       ├───Events.js      # Shared between Gideon and Felix
+│       ├───Footer.js       # Felix - Footer section for landing page
+│       ├───LandingPage/
+│       │   ├───FirstPage.js      # Isaac - First page section
+│       │   ├───SecondPage.js     # Isaac - Second page section
+│       │   ├───Courses.js         # Gideon - Courses section
+│       │   ├───OurMission.js       # Gideon - Our Mission section
+│       │   ├───Testimonials.js     # Felix - Testimonials section
+│       │   ├───OurTeam.js         # Felix - Our Team section
+│       ├───Navbar.js      # Isaac - Navbar component
+│       ├───Resources.js   # Isaac - Resources page
+│       ├───Services.js    # Felix - Services page
+│       ├───Team.js        # Shared between Felix and Isaac
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
 
+
 ```
 ## Color Codes
-button background #227AFF, headers #212529, 
+button background #227AFF, headers #212529, foote bg #173780

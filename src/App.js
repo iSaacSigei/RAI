@@ -10,7 +10,7 @@ import Events from './components/Client/Events';
 import Team from './components/Client/Team';
 import Blog from './components/Client/Blog';
 import Contact from './components/Client/Contact';
-
+import Footer from './components/Client/Footer';
 function App() {
   return (
     <Router>
@@ -26,6 +26,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
