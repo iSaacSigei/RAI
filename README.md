@@ -2,10 +2,20 @@
 
 This project is designed to build a website focused on Responsible AI.
 
-## Available Scripts
+## Forking the Repository
+
+To contribute to this project, you can fork the repository:
+
+1. **Fork the repository**: Click the "Fork" button at the top right corner of the repository page on GitHub: [RAI Repository](https://github.com/iSaacSigei/RAI.git).
+
+2. **Clone your forked repository**:
+   Open your terminal and run the following command, replacing `your-username` with your GitHub username:
+
+   ```bash
+   git clone git@github.com:your-username/RAI.git
 
 In the project directory, you can run:
-
+### `npm install`
 ### `npm start`
 
 Runs the app in development mode.  
@@ -42,3 +52,7 @@ src/
 │       └───Team.js        # Team page
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
+
+```
+## Color Codes
+button background #227AFF, headers #212529, 
