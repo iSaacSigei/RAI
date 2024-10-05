@@ -45,7 +45,7 @@ src/
 │       ├───Blog.js        # To be decided later
 │       ├───Contact.js     # Gideon - Contact page
 │       ├───Events.js      # Shared between Gideon and Felix
-│       ├───Footer.js       # Felix - Footer section for landing page
+│       ├───Footer.js       # Duncan - Footer section for landing page
 │       ├───LandingPage/
 │       │   ├───FirstPage.js      # Isaac - First page section
 │       │   ├───SecondPage.js     # Isaac - Second page section
