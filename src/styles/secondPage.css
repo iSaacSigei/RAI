@@ -1,0 +1,25 @@
+.second-page {
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    background-size: cover; /* Cover the entire div with background */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    padding-top: 100px;
+}
+
+.content-wrapper-page-2 {
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+
+}
+
+.content-wrapper-page-2 h1 {
+    margin-bottom: 5px; /* Adjusts space between h1 and p */
+}
+
+.content-wrapper-page-2 p {
+    margin: 0; /* Remove default margin */
+}
