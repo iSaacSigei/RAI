@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../../images/Logo.png'
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
@@ -55,14 +56,20 @@ const Footer = () => {
             <li><a href="#" className="no-underline hover:underline">Facebook</a></li>
             <li><a href="#" className="no-underline hover:underline">LinkedIn</a></li>
             <li><a href="#" className="no-underline hover:underline">Twitter</a></li>
+            <li><a href="https://www.tiktok.com/@raialliance" className="no-underline hover:underline">Tiktok</a></li>
           </ul>
         </div>
       </div>
 
-      {/* Center the paragraph and move icons to the right */}
-      <div className="text-center">
-        <p>&copy; 2024 Lift Media. All Rights Reserved.</p>
-        <div className="flex justify-center space-x-4 mt-4">
+      {/* Create a layout with left-aligned logo and centered social icons */}
+      <div className="flex items-center justify-between mt-4">
+        {/* Logo - Left aligned */}
+        <div className="ml-4">
+        <img src={Logo} alt='LogoImage' className="w-20 h-auto" />
+        </div>
+
+        {/* Social Icons - Centered */}
+        <div className="flex justify-center space-x-4 flex-grow">
           <a href="https://facebook.com" aria-label="Facebook" className="text-white hover:text-gray-400">
             <FaFacebookF className="w-5 h-5" />
           </a>
@@ -76,6 +83,10 @@ const Footer = () => {
             <FaTiktok className="w-5 h-5" />
           </a>
         </div>
+      </div>
+      
+      <div className="text-center mt-8">
+        <p>&copy; 2024 Lift Media. All Rights Reserved.</p>
       </div>
     </footer>
   );
