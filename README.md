@@ -44,19 +44,19 @@ src/
 │       ├───About.js       # Gideon - About page
 │       ├───Blog.js        # To be decided later
 │       ├───Contact.js     # Gideon - Contact page
-│       ├───Events.js      # Shared between Gideon and Felix
+│       ├───Events.js      # Duncan- Events Page
 │       ├───Footer.js       # Duncan - Footer section for landing page
 │       ├───LandingPage/
 │       │   ├───FirstPage.js      # Isaac - First page section
 │       │   ├───SecondPage.js     # Isaac - Second page section
-│       │   ├───Courses.js         # Gideon - Courses section
+│       │   ├───Courses.js         # Isaac - Courses section
 │       │   ├───OurMission.js       # Gideon - Our Mission section
 │       │   ├───Testimonials.js     # Felix - Testimonials section
 │       │   ├───OurTeam.js         # Felix - Our Team section
 │       ├───Navbar.js      # Isaac - Navbar component
 │       ├───Resources.js   # Isaac - Resources page
-│       ├───Services.js    # Felix - Services page
-│       ├───Team.js        # Shared between Felix and Isaac
+│       ├───Services.js    # Isaac - Services page
+│       ├───Team.js        # Isaac
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
 
