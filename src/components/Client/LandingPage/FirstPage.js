@@ -4,7 +4,6 @@ import BG1 from '../../../images/BG1.png';
 import BG2 from '../../../images/BG2.jpeg';
 import BG3 from './../../../images/BG3.jpeg'; 
 import { motion, AnimatePresence } from 'framer-motion';
-import { ReactTyped } from 'react-typed'; // Use named import
 const TypingText = ({ text, onComplete }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
