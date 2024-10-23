@@ -65,7 +65,7 @@ function Contact() {
 
         
 
-        <div className='border p-5  m-20 rounded-[10px] bg-white h-full'>
+        <div className='border p-5  md:m-20 rounded-[10px] bg-white h-full'>
           {errorMessages && (
             <div id="authmessage" className='text-red-500 text-center'>
               {errorMessages}
@@ -75,7 +75,7 @@ function Contact() {
           <h3 className='text-center mt-10 text-[#9C54AF] text-2xl'>Submit a Request Today</h3>
           <hr className='m-auto h-1 bg-black w-[80%]' />
 
-          <form className='flex flex-col m-5' noValidate onSubmit={handleSubmit(onSubmit)}>
+          <form className='flex flex-col md:m-5' noValidate onSubmit={handleSubmit(onSubmit)}>
             <div className='w-full flex justify-around flex-col items-center border border-slate-200 m-1 p-2'>
               <div className='flex flex-row gap-2 items-center'>
                 <label className='pt-2 text-black' htmlFor="contactname">Name:</label>
@@ -161,14 +161,14 @@ function Contact() {
 
 
       <div >
-        <div className='bg-[#fff] h-[100vh] text-[#000] m-20 p-20 rounded-xl'>
+        <div className='bg-[#fff] h-[50vh] text-[#000] md:m-20 md:p-20 p-5 my-5 rounded-xl'>
           <h3 className='text-center m-2 text-[#C05CBA] text-xl'>Hotline Inquiry</h3>
           <hr className='m-auto w-[80%] h-1' />
           <Link to='tel:+254-717-999-616'><p className='flex items-center gap-2 p-2 border m-5'><IoCall /> &nbsp; +254717999616</p></Link>
           <Link to='mailto:info@raifaalliance.org'><p className='text-center flex items-center gap-2 p-2 border m-5'><MdEmail />info@raifaalliance.org</p></Link>
         </div>
 
-        <div className='bg-[#fff]  pt-4  m-20 rounded-xl h-[100vh]'>
+        <div className='bg-[#fff]  py-4  md:m-20 rounded-xl h-[80vh]'>
           <h3 className='text-center m-2 text-xl text-[#C05CBA]'>Join our Community</h3>
           <hr className='w-[80%] m-auto' />
           <ul className='p-3 flex flex-col items-center md:flex-row justify-around'>
