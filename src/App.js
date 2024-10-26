@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Client/Navbar';
 import Home from './components/Client/Home';
 import About from './components/Client/About';
-import Services from './components/Client/Services';
+import WhoWeServe from './components/Client/WhoWeServe';
 import Resources from './components/Client/Resources';
 import Events from './components/Client/Events';
 import Team from './components/Client/Team';
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/who-we-serve" element={<WhoWeServe />} />
           <Route path="/events" element={<Resources />} />
           <Route path="/community" element={<Events />} />
           <Route path="/team" element={<Team />} />
