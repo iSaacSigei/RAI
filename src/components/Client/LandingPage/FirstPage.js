@@ -4,6 +4,7 @@ import BG1 from '../../../images/BG1.png';
 import BG2 from '../../../images/BG2.jpeg';
 import BG3 from './../../../images/BG3.jpeg'; 
 import { motion, AnimatePresence } from 'framer-motion';
+// import { ReactTyped } from 'react-typed'; // Use named import
 const TypingText = ({ text, onComplete }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
@@ -43,40 +44,14 @@ const messages = [
 
 const FirstPage = () => {
   const [currentMessage, setCurrentMessage] = useState(0);
-  const [currentCard, setCurrentCard] = useState(0);
-  const [completedCards, setCompletedCards] = useState(Array(messages.length).fill(false));
-  const [isTyping, setIsTyping] = useState(false);
-
-  const handleTypingComplete = () => {
-      if (currentCard < messages.length - 1) {
-          setCurrentCard((prev) => prev + 1); // Move to the next card
-      } else {
-          setIsTyping(false); // Stop typing when all cards are done
-      }
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % messages.length);
-      setCurrentCard(0); // Reset card to first when changing messages
-      setCompletedCards(Array(messages.length).fill(false)); // Reset completed cards
     }, 6000); // Change messages every 6 seconds
 
     return () => clearInterval(interval);
   }, []);
-
-  const handleCardTypingDone = () => {
-    setCompletedCards((prev) => {
-      const newCards = [...prev];
-      newCards[currentCard] = true; // Mark current card as completed
-      return newCards;
-    });
-
-    // Proceed to the next card if there's one
-    if (currentCard < messages.length - 1) {
-      setCurrentCard((prevCard) => prevCard + 1); // Increment to the next card
-    }
-  };
 
   return (
     <div className="landing-page">
@@ -108,29 +83,22 @@ const FirstPage = () => {
           </motion.div>
         </AnimatePresence>
         <div className="cards-section">
-                    <AnimatePresence>
-                        {messages.map((message, index) => (
-                            <motion.div
-                                key={index}
-                                className="cards"
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                exit={{ y: 50, opacity: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.2 + 1 }}
-                            >
-                                <h3>Card {index + 1}</h3>
-                                {currentCard === index && isTyping ? (
-                                    <TypingText
-                                        text={message.text}
-                                        onComplete={handleTypingComplete}
-                                    />
-                                ) : (
-                                    index <= currentCard && <p>{message.text}</p> // Retain text for completed cards
-                                )}
-                            </motion.div>
-                        ))}
-                    </AnimatePresence>
-                </div>
+          <AnimatePresence>
+            {messages.map((message, index) => (
+              <motion.div
+                key={index}
+                className="cards"
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 50, opacity: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 + 1 }}
+              >
+                <h3>Card {index + 1}</h3>
+                <p>{message.text}</p>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );
