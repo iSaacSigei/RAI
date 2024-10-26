@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../../images/Logo.png'; // Ensure the correct path
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaTiktok } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaTiktok,FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -66,6 +66,7 @@ const Footer = () => {
             <li><a href="https://linkedin.com" className="no-underline hover:underline text-white">LinkedIn</a></li>
             <li><a href="https://twitter.com" className="no-underline hover:underline text-white">Twitter</a></li>
             <li><a href="https://www.tiktok.com/@raialliance" className="no-underline hover:underline text-white">TikTok</a></li>
+            <li><a href="https://www.youtube.com/@RAIALLIANCE" className="no-underline hover:underline text-white">YouTube</a></li> {}
           </ul>
         </div>
       </div>
@@ -93,6 +94,9 @@ const Footer = () => {
           </a>
           <a href="https://www.tiktok.com/@raialliance" aria-label="TikTok" className="text-white hover:text-gray-400">
             <FaTiktok className="w-5 h-5" />
+          </a>
+          <a href="https://www.youtube.com/@RAIALLIANCE" aria-label="YouTube" className="text-white hover:text-gray-400">
+            <FaYoutube className="w-5 h-5" />
           </a>
         </div>
       </div>
