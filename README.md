@@ -1,4 +1,4 @@
-# RAI (Responsible AI) Project
+# RAI (Responsible AI) Website
 
 This project is designed to build a website focused on Responsible AI.
 
@@ -39,27 +39,28 @@ To learn more about React, visit the official [React documentation](https://reac
 ```bash
 src/
 ├───components/
-│   ├───Admin/         # Admin-related components-------For blog and events updates
+│   ├───Admin/         # Admin-related components ------- For blog and events updates
 │   └───Client/        # Client-side components
-│       ├───About.js       # Gideon - About page
-│       ├───Blog.js        # To be decided later
-│       ├───Contact.js     # Gideon - Contact page
-│       ├───Events.js      # Duncan- Events Page
-│       ├───Footer.js       # Duncan - Footer section for landing page
-│       ├───LandingPage/
-│       │   ├───FirstPage.js      # Isaac - First page section
-│       │   ├───SecondPage.js     # Isaac - Second page section
+│       ├───About.js           # Gideon - About page
+│       ├───Blog.js            # Maureen - Blog page
+│       ├───Contact.js         # Gideon - Contact page
+│       ├───Events.js          # Duncan - Events Page
+│       ├───Footer.js          # Duncan - Footer section for landing page
+│       ├───LandingPage/       # Landing page sections
+│       │   ├───FirstPage.js       # Isaac - First page section
+│       │   ├───SecondPage.js      # Isaac - Second page section
 │       │   ├───Courses.js         # Isaac - Courses section
-│       │   ├───OurMission.js       # Gideon - Our Mission section
-│       │   ├───Testimonials.js     # Felix - Testimonials section
+│       │   ├───OurMission.js      # Gideon - Our Mission section
+│       │   ├───Testimonials.js    # Felix - Testimonials section
 │       │   ├───OurTeam.js         # Felix - Our Team section
-│       ├───Navbar.js      # Isaac - Navbar component
-│       ├───Resources.js   # Isaac - Resources page
-│       ├───Services.js    # Isaac - Services page
-│       ├───Team.js        # Isaac
+│       │   ├───OurPartners.js     # Gitonga - Our Partners section
+│       │   ├───JoinUs.js          # Maureen - Join Us section
+│       ├───Navbar.js          # Isaac - Navbar component
+│       ├───Resources.js       # Isaac - Resources page
+│       ├───Services.js        # Isaac - Services page
+│       ├───Team.js            # Isaac
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
-
 
 ```
 ## Color Codes
