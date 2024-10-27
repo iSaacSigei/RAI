@@ -111,8 +111,17 @@ const Navbar = () => {
           <ul>
             <li><Link to="/" className={isActive('/')} onClick={handleLinkClick}>Home</Link></li>
             <li><Link to="/about" className={isActive('/about')} onClick={handleLinkClick}>About</Link></li>
-            <li><Link to="/services" className={isActive('/services')} onClick={handleLinkClick}>Services</Link></li>
-            <li><Link to="/courses" className={isActive('/courses')} onClick={handleLinkClick}>Courses</Link></li>
+            <li className="dropdown">
+              <Link to="#" onClick={handleLinkClick}>
+                <span>Who we Serve</span> <i className="bi bi-chevron-down toggle-dropdown"></i>
+              </Link>
+              <ul>
+                <li><Link to="#">Responsible AI for Students</Link></li>
+                <li><Link to="#">Responsible AI for Kids</Link></li>
+                <li><Link to="#">Responsible AI for Developers</Link></li>
+                <li><Link to="#">Responsible AI for Business</Link></li>
+              </ul>
+            </li>            <li><Link to="/courses" className={isActive('/courses')} onClick={handleLinkClick}>Courses</Link></li>
             <li><Link to="/events" className={isActive('/events')} onClick={handleLinkClick}>Events</Link></li>
             <li><Link to="/team" className={isActive('/team')} onClick={handleLinkClick}>Team</Link></li>
             <li><Link to="/blog" className={isActive('/blog')} onClick={handleLinkClick}>Blog</Link></li>

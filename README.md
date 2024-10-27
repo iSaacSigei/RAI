@@ -57,10 +57,12 @@ src/
 │       │   ├───JoinUs.js          # Maureen - Join Us section
 │       ├───Navbar.js          # Isaac - Navbar component
 │       ├───Resources.js       # Isaac - Resources page
-│       ├───Services.js        # Isaac - Services page
+│       ├───WhoWeServe.js      # Isaac - Who We Serve page (formerly Services)
+│       ├───CoursesPage.js     # Isaac - Courses Page
 │       ├───Team.js            # Isaac
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
+
 
 ```
 ## Color Codes
