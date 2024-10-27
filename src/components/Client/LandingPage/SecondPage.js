@@ -33,11 +33,6 @@ const SecondPage = () => {
         <motion.div
             ref={ref}
             className="second-page"
-            style={{
-                background: '#360033',  /* fallback for old browsers */
-                background: '-webkit-linear-gradient(to left, #0b8793, #360033)',  /* Chrome 10-25, Safari 5.1-6 */
-                background: 'linear-gradient(to left, #0b8793, #360033)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            }}
             initial={{ scale: 0.5 }} // Initial scale for zoom-out effect
             animate={{ scale: isVisible ? 1 : 0.5 }} // Zoom in when visible
             transition={{ duration: 0.5 }} // Duration of the zoom-in animation

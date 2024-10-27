@@ -1,9 +1,8 @@
 .second-page {
     height: 100vh; /* Full viewport height */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    background-size: cover; /* Cover the entire div with background */
     background-position: center; /* Center the background image */
-    color: white; /* Text color */
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    color: #333; /* Text color */
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center horizontally */
     padding-top: 100px;
