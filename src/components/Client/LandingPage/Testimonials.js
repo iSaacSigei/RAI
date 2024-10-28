@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './../../../styles/Testimonials.css';
-import image from '../../../images/testimonials_bg.png'
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
 import { RiDoubleQuotesL } from "react-icons/ri";
@@ -8,55 +7,50 @@ import comments from '../../testimonials';
 
 function Testimonials() {
   const testimonials = Object.keys(comments);
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const previousIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
   const nextIndex = (currentIndex + 1) % testimonials.length;
 
-  // Change focus every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     }, 7000);
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, []);
+
   const currentFocus = testimonials[currentIndex];
   const currentDisplay = comments[currentFocus];
-
   const nextFocus = testimonials[nextIndex];
   const nextDisplay = comments[nextFocus];
-
   const previousFocus = testimonials[previousIndex];
   const previousDisplay = comments[previousFocus];
 
   return (
-    <div className='testimonials'>
-      {/* .container */}
-        <div className="card-container current">
+    <div className='testimonials-wrapper'>
+        <div className="testimonial-card-container">
             <h1>Get to hear from the community</h1>
-            <button id="left"><FaArrowLeft/></button>
-            <button id="right"><FaArrowRight/></button>
-            <div className="cards">
-              <div className="previous">
-                <img src={previousDisplay.image} alt={previousDisplay} />
-                <FiChevronsLeft className='left btn'/>
+            <button id="testimonial-left"><FaArrowLeft/></button>
+            <button id="testimonial-right"><FaArrowRight/></button>
+            <div className="testimonial-cards">
+              <div className="testimonial-previous">
+                <img src={previousDisplay.image} alt="Previous Testimonial" />
+                <FiChevronsLeft className='testimonial-btn-left'/>
               </div>
-              <div className="card">
-                <img src={currentDisplay.image} alt={currentDisplay}/>
-                <span><RiDoubleQuotesL className='quotation'/></span>
+              <div className="testimonial-card">
+                <img src={currentDisplay.image} alt="Current Testimonial"/>
+                <span><RiDoubleQuotesL className='testimonial-quotation'/></span>
                 <p>{currentDisplay.message}</p>
                 <h4>~ Enrique Hessy</h4>
               </div>
-              <div className="next">
-                <img src={nextDisplay.image} alt={nextDisplay.image} />
-                {/* <p>testimonials[nextIndex].message</p> */}
-                <FiChevronsRight className='right btn'/>
+              <div className="testimonial-next">
+                <img src={nextDisplay.image} alt="Next Testimonial" />
+                <FiChevronsRight className='testimonial-btn-right'/>
               </div>
             </div>
         </div>
     </div>
-  )
+  );
 }
 
-export default Testimonials
+export default Testimonials;
