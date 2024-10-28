@@ -3,6 +3,7 @@ import FirstPage from './LandingPage/FirstPage';
 import SecondPage from './LandingPage/SecondPage';
 import Courses from './LandingPage/Courses';
 import OurMission from './LandingPage/OurMission';
+import OurPartners from './LandingPage/OurPartners';
 const Home = () => {
   return (
     <div>
@@ -10,6 +11,7 @@ const Home = () => {
       <SecondPage/>
       <Courses/>
       <OurMission/>
+      <OurPartners/>
     </div>
   )
 }
