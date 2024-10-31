@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom'; // If using React Router for navigation
+
 const Events = () => {
   const [search, setSearch] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState(null);
+  const [email, setEmail] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false); // For success message
+  const [emailSubmitted, setEmailSubmitted] = useState(false); // To trigger the success message
 
   const topics = ['Design Thinking', 'Technology', 'Web3', 'Programming', 'AI'];
   const events = [
@@ -32,6 +37,19 @@ const Events = () => {
     // Logic for confirming the booking (e.g., API call)
     console.log(`Confirmed booking for event ID: ${selectedEventId}`);
     setIsModalOpen(false); // Close the modal
+  };
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    console.log(`Submitted email: ${email}`);
+    setEmailSubmitted(true);
+    setEmail(''); // Reset the email input
+
+    // Show the success message
+    setShowSuccess(true);
+    setTimeout(() => {
+      setShowSuccess(false); // Hide after 5 seconds
+    }, 5000);
   };
 
   // Filter events based on search input and selected topic
@@ -130,12 +148,26 @@ const Events = () => {
           <div className="mt-10 border-t border-gray-300 pt-5">
             <h2 className="text-xl font-semibold">Stay up to date</h2>
             <p className="text-gray-600">Join Our Newsletter</p>
-            <form className="flex flex-col lg:flex-row items-start lg:items-center mt-3">
-              <input type="email" placeholder="Enter your email..." className="p-2 border border-gray-300 rounded mb-3 lg:mb-0 lg:mr-2 w-full lg:w-auto" />
+            <form onSubmit={handleEmailSubmit} className="flex flex-col lg:flex-row items-start lg:items-center mt-3">
+              <input 
+                type="email" 
+                placeholder="Enter your email..." 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="p-2 border border-gray-300 rounded mb-3 lg:mb-0 lg:mr-2 w-full lg:w-auto" 
+                required
+              />
               <button type="submit" className="px-3 py-1 text-white rounded" style={{ backgroundColor: '#800080' }}> Submit</button>
             </form>
             <p className="text-xs text-gray-500 mt-2">*You can unsubscribe anytime</p>
           </div>
+
+          {/* Success Message */}
+          {showSuccess && (
+            <div className={`mt-4 p-4 bg-green-200 text-green-800 rounded transition-transform transform ${emailSubmitted ? 'translate-x-0' : 'translate-x-full'} duration-1000`}>
+              You have submitted successfully!
+            </div>
+          )}
         </div>
       </div>
 
