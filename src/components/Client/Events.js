@@ -2,19 +2,31 @@ import React, { useState } from 'react';
 
 const Events = () => {
   const [search, setSearch] = useState('');
-  const [topics] = useState(['Design Thinking', 'Technology', 'Web3', 'Programming', 'AI']);
-  const [events] = useState([
-    { id: 1, title: 'Monthly Events With LEA Foundation', date: 'Mar 1, 1200 Hours', speaker: 'Mark Tuchel', type: 'Virtual' },
-    { id: 2, title: 'Annual Team Building Event', date: 'Jan 2, 1700 Hours', speaker: 'Harry Oland', type: 'Onsite' }
-  ]);
+  const [selectedTopic, setSelectedTopic] = useState('');
+  const topics = ['Design Thinking', 'Technology', 'Web3', 'Programming', 'AI'];
+  const events = [
+    { id: 1, title: 'Monthly Events With LEA Foundation', date: 'Mar 1, 1200 Hours', speaker: 'Mark Tuchel', type: 'Virtual', topic: 'Design Thinking' },
+    { id: 2, title: 'Annual Team Building Event', date: 'Jan 2, 1700 Hours', speaker: 'Harry Oland', type: 'Onsite', topic: 'Team Building' },
+    { id: 3, title: 'AI for Beginners Workshop', date: 'Apr 10, 1000 Hours', speaker: 'Alice Kim', type: 'Virtual', topic: 'AI' },
+    { id: 4, title: 'Introduction to Web3', date: 'May 15, 1400 Hours', speaker: 'Ben Stark', type: 'Onsite', topic: 'Web3' },
+    { id: 5, title: 'Programming Bootcamp', date: 'Jun 20, 0900 Hours', speaker: 'Carlos Diaz', type: 'Virtual', topic: 'Programming' },
+    { id: 6, title: 'Advanced Technology Trends', date: 'Jul 22, 1300 Hours', speaker: 'Dana Smith', type: 'Onsite', topic: 'Technology' },
+  ];
 
   const handleSearch = (e) => setSearch(e.target.value);
 
-  // Filter events based on search input for title, speaker, or date
+  const handleTopicClick = (topic) => {
+    setSelectedTopic(topic);
+  };
+
+  const handleClearFilter = () => setSelectedTopic('');
+
+  // Filter events based on search input and selected topic
   const filteredEvents = events.filter(event =>
-    event.title.toLowerCase().includes(search.toLowerCase()) ||
+    (event.title.toLowerCase().includes(search.toLowerCase()) ||
     event.speaker.toLowerCase().includes(search.toLowerCase()) ||
-    event.date.toLowerCase().includes(search.toLowerCase())
+    event.date.toLowerCase().includes(search.toLowerCase())) &&
+    (selectedTopic ? event.topic === selectedTopic : true)
   );
 
   return (
@@ -55,8 +67,22 @@ const Events = () => {
 
           <div className="flex flex-wrap gap-2 mb-5">
             {topics.map(topic => (
-              <button key={topic} className="px-3 py-1 border border-gray-300 rounded">{topic}</button>
+              <button 
+                key={topic} 
+                onClick={() => handleTopicClick(topic)} 
+                className={`px-3 py-1 border rounded ${selectedTopic === topic ? 'bg-purple-600 text-white' : 'border-gray-300'}`}
+              >
+                {topic}
+              </button>
             ))}
+            {selectedTopic && (
+              <button 
+                onClick={handleClearFilter} 
+                className="px-3 py-1 bg-red-500 text-white rounded"
+              >
+                X
+              </button>
+            )}
           </div>
 
           <div>
@@ -67,11 +93,13 @@ const Events = () => {
                     <h3 className="text-lg font-semibold">{event.title}</h3>
                     <p className="text-gray-600">{event.date} | Speaker: {event.speaker} | <span className={event.type === 'Virtual' ? 'text-purple-600' : 'text-blue-600'}>{event.type}</span></p>
                     <p className="text-gray-500">I'm always trying to think of new and interesting business ideas...</p>
-                    <button className="mt-2 px-3 py-1 border border-purple-600 text-purple-600 rounded">Book Now</button>
+                    <button style={{ backgroundColor: '#800080' }} className="mt-2 px-3 py-1 text-white rounded">Book Now</button>
                   </div>
                   
-                  {/* Right-side purple placeholder */}
-                  <div className="flex-none w-60 h-40 bg-purple-800 rounded mt-3 lg:mt-0"></div>
+                  {/* Right-side purple placeholder with white inner arc */}
+                  <div className="relative flex-none w-60 h-40 rounded mt-3 lg:mt-0" style={{ backgroundColor: '#800080' }}>
+                    <div className="absolute bottom-4 right-4 w-48 h-32 bg-white rounded-full" style={{ border: '8px solid #800080' }}></div>
+                  </div>
                 </div>
               ))
             ) : (
@@ -85,7 +113,7 @@ const Events = () => {
             <p className="text-gray-600">Join Our Newsletter</p>
             <form className="flex flex-col lg:flex-row items-start lg:items-center mt-3">
               <input type="email" placeholder="Enter your email..." className="p-2 border border-gray-300 rounded mb-3 lg:mb-0 lg:mr-2 w-full lg:w-auto" />
-              <button type="submit" className="px-3 py-1 bg-purple-600 text-white rounded">Submit</button>
+              <button type="submit" className="px-3 py-1 text-white rounded" style={{ backgroundColor: '#800080' }}> Submit</button>
             </form>
             <p className="text-xs text-gray-500 mt-2">*You can unsubscribe anytime</p>
           </div>
