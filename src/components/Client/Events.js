@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-
 const Events = () => {
   const [search, setSearch] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEventId, setSelectedEventId] = useState(null);
+
   const topics = ['Design Thinking', 'Technology', 'Web3', 'Programming', 'AI'];
   const events = [
     { id: 1, title: 'Monthly Events With LEA Foundation', date: 'Mar 1, 1200 Hours', speaker: 'Mark Tuchel', type: 'Virtual', topic: 'Design Thinking' },
@@ -20,6 +22,17 @@ const Events = () => {
   };
 
   const handleClearFilter = () => setSelectedTopic('');
+
+  const handleBookNow = (eventId) => {
+    setSelectedEventId(eventId);
+    setIsModalOpen(true); // Open the confirmation modal
+  };
+
+  const handleConfirmBooking = () => {
+    // Logic for confirming the booking (e.g., API call)
+    console.log(`Confirmed booking for event ID: ${selectedEventId}`);
+    setIsModalOpen(false); // Close the modal
+  };
 
   // Filter events based on search input and selected topic
   const filteredEvents = events.filter(event =>
@@ -93,7 +106,13 @@ const Events = () => {
                     <h3 className="text-lg font-semibold">{event.title}</h3>
                     <p className="text-gray-600">{event.date} | Speaker: {event.speaker} | <span className={event.type === 'Virtual' ? 'text-purple-600' : 'text-blue-600'}>{event.type}</span></p>
                     <p className="text-gray-500">I'm always trying to think of new and interesting business ideas...</p>
-                    <button style={{ backgroundColor: '#800080' }} className="mt-2 px-3 py-1 text-white rounded">Book Now</button>
+                    <button 
+                      onClick={() => handleBookNow(event.id)} 
+                      style={{ backgroundColor: '#800080' }} 
+                      className="mt-2 px-3 py-1 text-white rounded"
+                    >
+                      Book Now
+                    </button>
                   </div>
                   
                   {/* Right-side purple placeholder with white inner arc */}
@@ -119,6 +138,20 @@ const Events = () => {
           </div>
         </div>
       </div>
+
+      {/* Confirmation Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white rounded p-5">
+            <h2 className="text-lg font-semibold">Confirm Booking</h2>
+            <p>Are you sure you want to book this event?</p>
+            <div className="mt-4">
+              <button onClick={() => setIsModalOpen(false)} className="mr-2 px-3 py-1 border rounded">Cancel</button>
+              <button onClick={handleConfirmBooking} className="px-3 py-1 bg-purple-600 text-white rounded">Confirm</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
