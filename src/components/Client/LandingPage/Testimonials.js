@@ -1,56 +1,97 @@
-import React, { useState, useEffect } from 'react';
-import './../../../styles/Testimonials.css';
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
-import { RiDoubleQuotesL } from "react-icons/ri";
-import comments from '../../testimonials';
+import React from "react";
+import Slider from "react-slick";
+import { FaQuoteLeft } from "react-icons/fa";
 
-function Testimonials() {
-  const testimonials = Object.keys(comments);
-  const [currentIndex, setCurrentIndex] = useState(0);
+import "../../../styles/Testimonials.css"; // Your custom CSS
 
-  const previousIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-  const nextIndex = (currentIndex + 1) % testimonials.length;
+// Sample testimonials data
+const testimonials = [
+  {
+    id: 1,
+    name: "Maria Smantha",
+    text: "Lorem ipsum dolor sit amet eos adipisci, consectetur adipisicing elit.",
+    image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp",
+    bgColor: "#9d789b"
+  },
+  {
+    id: 2,
+    name: "Lisa Cudrow",
+    text: "Neque cupiditate assumenda in maiores repudi mollitia architecto.",
+    image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp",
+    bgColor: "#7a81a8"
+  },
+  {
+    id: 3,
+    name: "John Smith",
+    text: "Delectus impedit saepe officiis ab aliquam repellat rem unde ducimus.",
+    image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp",
+    bgColor: "#6d5b98"
+  },
+  {
+    id: 4,
+    name: "Jane Doe",
+    text: "Aliquam officiis ab repellat rem unde ducimus.",
+    image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp",
+    bgColor: "#d88598"
+  }
+];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, []);
+// Carousel settings with automatic sizing
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  centerMode: false, // Disable center mode if it's causing layout issues
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
-  const currentFocus = testimonials[currentIndex];
-  const currentDisplay = comments[currentFocus];
-  const nextFocus = testimonials[nextIndex];
-  const nextDisplay = comments[nextFocus];
-  const previousFocus = testimonials[previousIndex];
-  const previousDisplay = comments[previousFocus];
-
+const Testimonials = () => {
   return (
-    <div className='testimonials-wrapper'>
-        <div className="testimonial-card-container">
-            <h1>Get to hear from the community</h1>
-            <button id="testimonial-left"><FaArrowLeft/></button>
-            <button id="testimonial-right"><FaArrowRight/></button>
-            <div className="testimonial-cards">
-              <div className="testimonial-previous">
-                <img src={previousDisplay.image} alt="Previous Testimonial" />
-                <FiChevronsLeft className='testimonial-btn-left'/>
+    <div className="testimonials-container">
+      {/* Introduction Section */}
+      <div className="testimonials-intro">
+        <h2>See What Our Students Say</h2>
+        <p>Hear from our students about their experiences and how our programs have impacted their lives.</p>
+      </div>
+
+      {/* Testimonials Slider */}
+      <Slider {...settings}>
+        {testimonials.map(({ id, name, text, image, bgColor }) => (
+          <div key={id} className="testimonial-card">
+            <div className="card-top" style={{ backgroundColor: bgColor }}></div>
+            <div className="card-content">
+              <div className="card-middle">
+                <img src={image} alt={`${name}'s profile`} className="avatar" />
+                <h4>{name}</h4>
+                <hr />
               </div>
-              <div className="testimonial-card">
-                <img src={currentDisplay.image} alt="Current Testimonial"/>
-                <span><RiDoubleQuotesL className='testimonial-quotation'/></span>
-                <p>{currentDisplay.message}</p>
-                <h4>~ Enrique Hessy</h4>
-              </div>
-              <div className="testimonial-next">
-                <img src={nextDisplay.image} alt="Next Testimonial" />
-                <FiChevronsRight className='testimonial-btn-right'/>
+              <div className="card-bottom">
+                <FaQuoteLeft className="quote-icon" />
+                <p>{text}</p>
               </div>
             </div>
-        </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
-}
+};
 
 export default Testimonials;
