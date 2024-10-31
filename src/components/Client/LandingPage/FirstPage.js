@@ -1,44 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import '../../../styles/firstPage.css'; // Import styles
+import '../../../styles/firstPage.css';
 import BG1 from '../../../images/BG1.png'; 
 import BG2 from '../../../images/BG2.jpeg';
-import BG3 from './../../../images/BG3.jpeg'; 
+import BG3 from '../../../images/BG3.jpeg';
 import { motion, AnimatePresence } from 'framer-motion';
-// import { ReactTyped } from 'react-typed'; // Use named import
-const TypingText = ({ text, onComplete }) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [index, setIndex] = useState(0);
-
-  React.useEffect(() => {
-      if (index < text.length) {
-          const timeoutId = setTimeout(() => {
-              setDisplayedText(text.substring(0, index + 1));
-              setIndex(index + 1);
-          }, 30); // Typing speed
-          return () => clearTimeout(timeoutId);
-      } else {
-          onComplete(); // Notify parent component when typing completes
-      }
-  }, [index, text, onComplete]);
-
-  return <p>{displayedText}</p>;
-};
 
 const messages = [
   {
     title: "Building a Responsible AI Future",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text: "Join us in shaping a future where artificial intelligence is developed ethically, with a focus on transparency and societal well-being.",
     backgroundImage: BG1
   },
   {
     title: "Innovation through Technology",
-    text: "Pellentesque habitant morbi tristique senectus et netus et malesuada.",
+    text: "Harness the power of cutting-edge technologies to drive transformative solutions that impact lives and inspire creativity.",
     backgroundImage: BG2
   },
   {
     title: "Empowering Communities",
-    text: "Quisque ut nisi quis dolor tempus aliquet eget quis metus.",
+    text: "Empowering communities with resources and knowledge to thrive in an increasingly digital world, fostering growth and opportunity.",
     backgroundImage: BG3
+  }
+];
+
+
+const cardContents = [
+  {
+    title: "4 Online Courses",
+    text: "Unlock your potential with our resources and start harnessing AI responsibly today."
+  },
+  {
+    title: "Our Ambassadors",
+    text: "Join our team of ambassadors driving Responsible AI initiatives."
+  },
+  {
+    title: "Well-Curated Courses",
+    text: "Be part of our community of Responsible AI learners."
   }
 ];
 
@@ -48,7 +45,7 @@ const FirstPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % messages.length);
-    }, 6000); // Change messages every 6 seconds
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -82,9 +79,11 @@ const FirstPage = () => {
             <button className="cta-button">Get Started</button>
           </motion.div>
         </AnimatePresence>
+
+        {/* Card Section */}
         <div className="cards-section">
           <AnimatePresence>
-            {messages.map((message, index) => (
+            {cardContents.map((card, index) => (
               <motion.div
                 key={index}
                 className="cards"
@@ -93,8 +92,8 @@ const FirstPage = () => {
                 exit={{ y: 50, opacity: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 + 1 }}
               >
-                <h3>Card {index + 1}</h3>
-                <p>{message.text}</p>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
               </motion.div>
             ))}
           </AnimatePresence>
