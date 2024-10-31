@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; // If using React Router for navigation
+// import { useHistory } from 'react-router-dom'; // If using React Router for navigation
 
 const Events = () => {
   const [search, setSearch] = useState('');
@@ -61,7 +61,7 @@ const Events = () => {
   );
 
   return (
-    <div className="p-5 font-sans">
+    <div className="p-5 font-sans mt-[130px]"> {/* Added margin top of 130px */}
       <h1 className="text-2xl font-bold">Upcoming Events</h1>
       <p className="text-gray-600">Powerful Trading Tools and Features for Experienced Investors</p>
       
