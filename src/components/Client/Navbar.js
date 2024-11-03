@@ -101,7 +101,7 @@ const Navbar = () => {
   const isActive = (path) => (location.pathname === path ? 'active' : '');
 
   return (
-    <header id="header" className="header  d-flex align-items-center fixed-top">
+    <header id="header" className="header border-b border-slate-400 d-flex align-items-center fixed-top">
       <div className="container-fluid position-relative d-flex align-items-center justify-content-between">
         <Link to="/" className={`logo d-flex align-items-center me-auto me-xl-0 ${isActive('/')}`} onClick={handleLinkClick}>
           <img src={Logo} alt='Logo' />

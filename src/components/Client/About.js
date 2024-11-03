@@ -91,6 +91,8 @@ function About() {
               <button className="learn-more">Learn More</button>
             </div>
           </div>
+
+          
           <div className="about-row">
             <div className="text-column">
               <h3 className="description-header">Introducing AI to Young Learners</h3>
