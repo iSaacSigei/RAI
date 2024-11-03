@@ -6,12 +6,14 @@ import OurMission from './LandingPage/OurMission';
 import OurPartners from './LandingPage/OurPartners';
 import Testimonials from './LandingPage/Testimonials';
 import Team from './LandingPage/Team';
+import OurGallery from './LandingPage/OurGallery';
 
 const Home = () => {
   return (
     <div>
       <FirstPage/>
       <SecondPage/>
+      <OurGallery/>
       <Courses/>
       <Testimonials/>
       <OurMission/>

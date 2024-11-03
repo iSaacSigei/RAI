@@ -1,0 +1,107 @@
+.gallery-container {
+    padding: 2rem;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.gallery-row {
+    margin-bottom: 20px; /* Add a gap between gallery-rows */
+}
+
+.gallery-row1 {
+    display: flex;
+    justify-content: space-between; /* Different layout for the first gallery-row */
+}
+
+.header-container {
+    flex: 1;
+}
+.header-container > h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Grid container for gallery-rows 2 and 3 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal gallery-columns */
+    gap: 20px; /* 20px gap between grid items */
+    justify-items: end; /* Align items to the right */
+}
+
+.gallery-col {
+    display: flex;
+    justify-content: flex-end; /* Align images to the right */
+}
+
+.empty {
+    flex: 1; /* Empty gallery-column */
+}
+
+.single-image {
+    display: flex;
+    flex-direction: column; /* Stack the images vertically */
+}
+
+.image-container-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align the image to the bottom */
+    height: 100%; /* Fill the gallery-column */
+}
+
+.top-empty {
+    flex: 1; /* Take up space in the top half */
+}
+
+.double-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between the two images */
+}
+
+.double-image-container img {
+    width: 100%;
+}
+
+.wide {
+    grid-column: span 2; /* Make this gallery-column wider in the grid */
+}
+
+/* Additional styling for images in gallery-row 3 */
+.grid-container img {
+    margin-bottom: 20px; /* Add bottom margin for images in gallery-row 3 */
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.view-more-btn {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    color: #007bff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.view-more-btn .arrow {
+    margin-left: 8px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover .arrow {
+    transform: translateX(5px); /* Slide effect on arrow */
+}
