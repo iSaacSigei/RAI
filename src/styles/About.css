@@ -115,7 +115,7 @@
   
 /* Larger wrapper with a circular shape and border */
 .image-wrapper {
-    background-color: #800080;
+  background-color: #800080;
     border-radius: 50% 40% 60% 30% / 30% 50% 40% 60%; /* Irregular shape */
     height: 350px;
     width: 370px;

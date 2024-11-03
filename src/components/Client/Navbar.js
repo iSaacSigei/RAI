@@ -148,7 +148,8 @@ const Navbar = () => {
                 <li><Link to="#">Dropdown 4</Link></li>
               </ul>
             </li>
-            <li><Link to="/contact" className={isActive('/contact')} onClick={handleLinkClick}>Contact</Link></li>
+            <li><Link to="/contact" className={isActive('/contact')} onClick={handleLinkClick}>Contact</Link></li> 
+            <li><Link to="/donate" className={isActive('/donate')} onClick={handleLinkClick}>Donate</Link></li>
           </ul>
           <i className={`mobile-nav-toggle ${isMobile ? 'bi-x' : 'bi-list'}`} onClick={() => setIsMobile(!isMobile)}></i>
         </nav>
