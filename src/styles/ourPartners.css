@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 .ourPartnersWrapper {
     background: #f4f4f9;
   }
   
-=======
-
->>>>>>> 2c6fbfb48c4f1d68e22d2938a48c8298b784bdd7
   .partnersHeader {
     position: relative;
     display: inline-block;
@@ -23,6 +19,7 @@
     height: 4px;
     background: linear-gradient(90deg, #721975, #feb47b);
     border-radius: 2px;
+    margin-bottom: 20px;
   }
   
   
