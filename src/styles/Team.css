@@ -1,4 +1,4 @@
-.team{
+.team-container {
     width: 95vw;
     height: 95vh;
     background: rgb(220, 220, 220);
@@ -6,23 +6,27 @@
     margin: 10px auto;
     align-self: center;
     position: relative;
-}
-.top{
+  }
+  
+  .team-top {
     display: flex;
-    /* flex-wrap: wrap; */
     margin: 0;
     padding: 0;
-}
-.top h4, .top h6{
+  }
+  
+  .team-top h4,
+  .team-top h6 {
     margin: 0;
-}
-.top img{
+  }
+  
+  .team-top img {
     width: 50px;
     height: 50px;
     margin: auto;
     margin-right: 10px;
-}
-.components-group{
+  }
+  
+  .team-components-group {
     margin: 1rem auto;
     width: 100%;
     display: flex;
@@ -31,30 +35,37 @@
     padding: 1rem 2rem;
     height: 90%;
     position: relative;
-}
-.components-group .component{
+  }
+  
+  .team-component {
     width: 350px;
     border: 1px solid green;
     background: white;
     border-radius: 2rem;
     padding: 1.5rem 2rem;
-}
-.components-group .focused{
+  }
+  
+  .team-focused {
     border-color: transparent;
     box-shadow: 1px 1px 5px purple;
     height: 100%;
-}
-.components-group .left, .components-group .right{
+  }
+  
+  .team-left,
+  .team-right {
     height: 90%;
     margin: auto;
-}
-.components-group .left{
+  }
+  
+  .team-left {
     box-shadow: -1px 1px 5px rgb(16, 9, 9);
-}
-.components-group .right{
+  }
+  
+  .team-right {
     box-shadow: 1px 1px 5px rgb(16, 9, 9);
-}
-.arrows{
+  }
+  
+  .team-arrows {
     position: absolute;
     font-size: 3em;
     top: 50%;
@@ -63,17 +74,19 @@
     border-radius: 50%;
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: rgb(82, 27, 155);
-}
-.arrowLeft{
+  }
+  
+  .team-arrow-left {
     left: 0;
-}
-.arrowRight{
+  }
+  
+  .team-arrow-right {
     right: 0;
-}
-.arrows:hover{
+  }
+  
+  .team-arrows:hover {
     background: rgb(82, 27, 155, .7);
-}
-.arrows:hover{
     color: rgb(255, 215, 129);
     cursor: pointer;
-}
+  }
+  

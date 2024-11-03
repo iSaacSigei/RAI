@@ -1,233 +1,129 @@
-.testimonials{
-    width: 95vw;
-    height: 95vh;
-    background: rgb(195, 195, 195);
-    border: 1px solid rgb(46, 46, 46);
-    margin: 10px auto;
-    align-self: center;
-    background-image: url('./../images/testimonials_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+/* Override default styles for react-slick Slider */
+.slick-slider {
+  background-color: transparent; /* Remove background color */
+  width: 100%; /* Allow slider to take full width of the container */
+  height: auto; /* Allow height to adjust based on content */
 }
-.testimonials::after{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgb(0, 0, 0, .3);
-    z-index: 1;
-    content: "";
-    top: 0;
-    left: 0;
+
+.slick-list {
+  overflow: hidden; /* Hide overflow to prevent extra space */
 }
-.card-container{
-    z-index: 11;
-    width: 450px;
-    height: 90%;
-    position: relative;
-    margin: 1.5rem;
-    transform: translateX(-50%);
-    margin-left: 50%;
+
+.slick-track {
+  display: flex; /* Ensure the slides are arranged in a row */
+  align-items: flex-start; /* Align items to the start */
 }
-.card-container h1{
-    font-size: 50px;
-    color: white;
-    padding: 12px;
+
+.slick-slide {
+  display: flex; /* Allow flexbox properties */
+  justify-content: center; /* Center align slides */
+  height: auto; /* Allow slides to adjust height based on content */
 }
-.card-container button{
-    position: absolute;
-    border-radius: 50%;
-    transform: translateY(-25%);
-    margin-top: 25%;
-    padding: .5rem .4rem;
-    background-color: #c6c6c6;
-    z-index: 11;
-    font-size: 1.5em;
+
+.testimonials-intro {
+  text-align: center; /* Center align text */
+  margin-bottom: 2rem; /* Add space below the introduction */
 }
-.cards{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 250px;
-    position: relative;
+
+.testimonials-intro h2 {
+  font-size: 2rem; /* Adjust header size */
+  color: #333; /* Header color */
 }
-.card{
-    padding: .6rem 1rem;
-    border-radius: 1.2rem;
-    background: rgb(237, 237, 237);
-    position: relative;
-    min-height: 100%;
-    animation: 7s transit linear infinite;
+
+.testimonials-intro p {
+  font-size: 1rem; /* Adjust paragraph size */
+  color: #555; /* Paragraph color */
+  margin-top: 0.5rem; /* Space between header and paragraph */
 }
-#left, #right{
-    display: none;
+
+.testimonials-container {
+  width: 100%; /* Make sure it takes full width */
+  gap: 20px;
+  padding: 2rem;
+  overflow: hidden; /* Prevent overflow from the slider */
+  min-height: 70vh;
+  margin-bottom: 60px;
 }
-#left{
-    left: -1rem;
+
+.testimonial-card {
+  width: 300px; /* Set a fixed width for larger screens */
+  max-width: 90%; /* Prevents stretching on smaller screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-#right{
-    right: -1rem;
+
+/* Inner content zoom on hover */
+.card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
-.card img{
-    width: 55px;
-    height: 60px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: .1rem;
-    border: 1px solid rgba(24, 82, 97, .6);
-    border-radius: 50%;
-    top: -15%;
-    background: white;
+
+.testimonial-card:hover .card-content {
+  transform: scale(1.05);
 }
-@keyframes transit {
-    90%{
-        opacity: 1;
-        /* transform: translateX(0) scaleY(1); */
-        color: initial;
-    }
-    95%{
-        opacity: .8;
-        /* transform: translateX(-250px) scaleY(.1); */
-        color: transparent;
-    }
-    100%{
-        /* transform: translateX(-150px) scaleY(1); */
-        opacity: .1;
-        color: transparent;
-    }
+
+.card-top {
+  width: 100%;
+  height: 120px;
+  position: relative;
 }
-@keyframes scaled{
-    90%{
-        opacity: 1;
-        transform: scaleY(1) rotateX(0);
-    }
-    95%{
-        opacity: .8;
-        transform: scaleY(.5) rotateX(90deg);
-    }
-    100%{
-        transform: scaleY(.8);
-        opacity: .1;
-    }
+
+.card-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 0.6rem 0;
+  position: relative;
 }
-.card h4{
-    text-align: right;
-    bottom: 0;
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  border: 5px solid #fff;
 }
-.card span{
-    position: absolute;
-    font-size: 2.2em;
-    top: .5rem;
+
+.card-middle h4 {
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+  color: #333;
 }
-.card p{
-    overflow: hidden;
-    text-overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
-    text-align: center;
-    font-style: italic;
-    height: 150px;
+
+.card-bottom {
+  padding: 1.1rem;
+  text-align: center;
 }
-.card p::before {
-    content: '';
-    display: inline-block;
-    width: 3rem; 
+
+.card-bottom p {
+  font-size: 1rem;
+  color: #555;
 }
-.quotation{
-    /* color: rgb(46, 46, 46); */
-    color: rgb(195, 195, 195);
+
+.quote-icon {
+  color: #800080;
+  font-size: 1.0rem;
+  margin-bottom: 0.5rem;
 }
-.card:hover::before{
-    outline: 2px solid purple;
-    background: white;
-    opacity: 50%;
-    height: 100%;
-}
-.previous, .next{
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    z-index: 11;
-    right: -100%;
-    padding: .6rem 1rem;
-    border-radius: 1.2rem;
-    top: -1.2rem;
-    text-align: center;
-    font-size: 53px;
-    color: transparent;
-    align-items: center;
-    justify-content: center;
-    animation: 7s scaled linear infinite;
-}
-.previous img, .next img{
-    width: 90px;
-    height: 120px;
-    margin: 3rem auto;
-    opacity: 65%;
-    border-radius: 50%;
-    position: relative;
-    transition: 10s ease-in-out;
-}
-.previous:hover::after, .next:hover::after{
-    position: absolute;
-    background: rgb(255, 255, 255, .4);
-    content:'';
-    width: 105%;
-    height: 105%;
-    top: 0;
-    border-radius: 1.2rem;
-    border: 3px solid purple;
-    z-index: -11;
-    /* outline: 1px solid purple; */
-}
-.card:hover::after{
-    position: absolute;
-    background: rgb(255, 255, 255, .4);
-    top: -3%;
-    border-radius: 1.2rem;
-    border: 3px solid purple;
-    content:'';
-    width: 105%;
-    height: 105%;
-    left: -3%;
-    z-index: -1;
-} 
-.previous:hover:after{
-    left: -10%;
-    top: -4%;
-}
-.next:hover:after{
-    left: 2%;
-}
-.previous:hover, .next:hover{
-    color: purple;
-}
-.previous{
-    left: -45%;
-    background: linear-gradient(-90deg, white, transparent);
-    transform: skewY(10deg);
-}
-.next{
-    transform: skewY(-10deg);
-    right: -45%;
-    background: linear-gradient(90deg, white, transparent);
-}
-.btn{
-    font-size: 2.2em;
-    align-self: center;
-    margin-top: 27%;
-    z-index: 11;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    
-}
-.btn:hover{
-    background: rgb(255, 255, 255, .6);
-    border-radius: 50%;
-    outline: 1px solid purple;
-    cursor: pointer;
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 90%; /* Take up 90% of the width on small screens */
+  }
 }

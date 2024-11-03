@@ -63,7 +63,7 @@ const Courses = () => {
       </p>
       <div className="row mx-4">
         {courses.map((course, index) => (
-          <div key={index} className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay={index * 100}>
+          <div key={index} className="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay={index * 10}>
             <div className="card course-card">
               <img src={course.image} className="card-img-top" alt={course.title} />
               <div className="card-body">
