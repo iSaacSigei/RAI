@@ -109,9 +109,9 @@ const Events = () => {
             {selectedTopic && (
               <button 
                 onClick={handleClearFilter} 
-                className="px-3 py-1 bg-red-500 text-white rounded"
+              className="px-3 py-1 bg-red-500 text-white rounded-full"
               >
-                X
+                Clear
               </button>
             )}
           </div>
@@ -126,16 +126,15 @@ const Events = () => {
                     <p className="text-gray-500">I'm always trying to think of new and interesting business ideas...</p>
                     <button 
                       onClick={() => handleBookNow(event.id)} 
-                      style={{ backgroundColor: '#800080' }} 
-                      className="mt-2 px-3 py-1 text-white rounded"
+                       className="mt-2 px-3 py-1 text-white bg-purple-600 rounded"
                     >
                       Book Now
                     </button>
                   </div>
                   
                   {/* Right-side purple placeholder with white inner arc */}
-                  <div className="relative flex-none w-60 h-40 rounded mt-3 lg:mt-0" style={{ backgroundColor: '#800080' }}>
-                    <div className="absolute bottom-4 right-4 w-48 h-32 bg-white rounded-full" style={{ border: '8px solid #800080' }}></div>
+                  <div className="relative w-32 h-32 rounded-full bg-purple-600 mt-5 lg:mt-0 lg:ml-5">
+                  <div className="absolute bottom-4 right-4 w-20 h-20 bg-white rounded-full"></div>
                   </div>
                 </div>
               ))
@@ -157,7 +156,7 @@ const Events = () => {
                 className="p-2 border border-gray-300 rounded mb-3 lg:mb-0 lg:mr-2 w-full lg:w-auto" 
                 required
               />
-              <button type="submit" className="px-3 py-1 text-white rounded" style={{ backgroundColor: '#800080' }}> Submit</button>
+              <button type="submit"   className="mt-2 px-3 py-1 text-white bg-purple-600 rounded"> Submit</button>
             </form>
             <p className="text-xs text-gray-500 mt-2">*You can unsubscribe anytime</p>
           </div>
