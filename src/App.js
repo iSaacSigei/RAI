@@ -12,6 +12,7 @@ import Blog from './components/Client/Blog';
 import Contact from './components/Client/Contact';
 import Footer from './components/Client/Footer';
 import CoursesPage from './components/Client/CoursesPage';
+import Donate from './components/Donate';
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
           <Route path='/courses' element={<CoursesPage/>}/>
           <Route path="/team" element={<Team />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/donate" element={<Donate/>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer/>

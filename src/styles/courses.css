@@ -14,7 +14,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
     border-radius: 10px;
     position: relative; /* For free banner */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .course-card:hover {
@@ -22,7 +22,6 @@
 }
 
 .course-card img {
-    border-radius: 10px 10px 0 0;
     height: 200px;
     object-fit: cover;
 }

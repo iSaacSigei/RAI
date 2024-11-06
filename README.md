@@ -42,27 +42,31 @@ src/
 │   ├───Admin/         # Admin-related components ------- For blog and events updates
 │   └───Client/        # Client-side components
 │       ├───About.js           # Gideon - About page
-│       ├───Blog.js            # Maureen - Blog page
+│       ├───Blog.js            # Duncan - Blog page
 │       ├───Contact.js         # Gideon - Contact page
-│       ├───Events.js          # Duncan - Events Page
+│       ├───Events.js          # Duncan - Events page
 │       ├───Footer.js          # Duncan - Footer section for landing page
+│       ├───Gallery.js         # Gitonga - Gallery section
 │       ├───LandingPage/       # Landing page sections
-│       │   ├───FirstPage.js       # Isaac - First page section
-│       │   ├───SecondPage.js      # Isaac - Second page section
 │       │   ├───Courses.js         # Isaac - Courses section
+│       │   ├───FirstPage.js       # Isaac - First page section
+│       │   ├───JoinUs.js          # Duncan - Join Us section
+│       │   ├───OurGallery.js      # Isaac - Gallery Page
 │       │   ├───OurMission.js      # Gideon - Our Mission section
-│       │   ├───Testimonials.js    # Felix - Testimonials section
-│       │   ├───OurTeam.js         # Felix - Our Team section
 │       │   ├───OurPartners.js     # Gitonga - Our Partners section
-│       │   ├───JoinUs.js          # Maureen - Join Us section
+│       │   ├───OurTeam.js         # Felix - Our Team section
+│       │   ├───SecondPage.js      # Isaac - Second page section
+│       │   ├───Team.js            # Gideon - Team section
+│       │   ├───Testimonials.js    # Felix - Testimonials section
 │       ├───Navbar.js          # Isaac - Navbar component
 │       ├───Resources.js       # Isaac - Resources page
-│       ├───WhoWeServe.js      # Isaac - Who We Serve page (formerly Services)
+│       ├───WhoWeServe.js      # Unassigned (formerly Services)
 │       ├───CoursesPage.js     # Isaac - Courses Page
-│       ├───Team.js            # Isaac
+│       ├───CourseCard.js      # Isaac - Part of Courses Page
+│       ├───RelatedCourses.js  # Component for related courses
+│       ├───VideoModal.jsx     # Component for video modals
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
-
 
 ```
 ## Color Codes
