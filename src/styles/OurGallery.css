@@ -6,84 +6,75 @@
 }
 
 .gallery-row {
-    margin-bottom: 20px; /* Add a gap between gallery-rows */
+    margin-bottom: 20px;
 }
 
 .gallery-row1 {
     display: flex;
-    justify-content: space-between; /* Different layout for the first gallery-row */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .header-container {
     flex: 1;
 }
-.header-container > h1{
+
+.header-container > h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
+
 .image-container {
     flex: 1;
+    height: 350px;
     display: flex;
-    justify-content: flex-end; /* Align the image to the right */
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    max-width: 330px; /* Initial width for the first image */
 }
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Grid container for gallery-rows 2 and 3 */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Create 4 equal gallery-columns */
-    gap: 20px; /* 20px gap between grid items */
-    justify-items: end; /* Align items to the right */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .gallery-col {
-    display: flex;
-    justify-content: flex-end; /* Align images to the right */
+    height: 250px;
+    background-size: cover;
+    background-position: center;
 }
 
 .empty {
-    flex: 1; /* Empty gallery-column */
+    height: 250px;
+    flex: 1;
 }
 
-.single-image {
-    display: flex;
-    flex-direction: column; /* Stack the images vertically */
-}
-
-.image-container-bottom {
+.single-image .image-container-bottom {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Align the image to the bottom */
-    height: 100%; /* Fill the gallery-column */
+    height: 100%;
+    justify-content: flex-end;
 }
 
 .top-empty {
-    flex: 1; /* Take up space in the top half */
+    flex: 1;
 }
 
 .double-image-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Add gap between the two images */
+    gap: 10px;
 }
 
-.double-image-container img {
-    width: 100%;
+.double-image-container .image-item {
+    height: 150px;
 }
 
 .wide {
-    grid-column: span 2; /* Make this gallery-column wider in the grid */
-}
-
-/* Additional styling for images in gallery-row 3 */
-.grid-container img {
-    margin-bottom: 20px; /* Add bottom margin for images in gallery-row 3 */
-    max-width: 100%; /* Ensure images do not overflow */
-    height: auto; /* Maintain aspect ratio */
+    grid-column: span 2;
+    height: 250px;
 }
 
 .view-more-btn {
@@ -92,7 +83,6 @@
     font-size: 1rem;
     color: #007bff;
     cursor: pointer;
-    display: flex;
     align-items: center;
 }
 
@@ -103,5 +93,52 @@
 }
 
 .view-more-btn:hover .arrow {
-    transform: translateX(5px); /* Slide effect on arrow */
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .gallery-row1 {
+        flex-direction: column; /* Stack header and image on smaller screens */
+        align-items: center;
+    }
+    
+    .image-container {
+        height: 250px; /* Reduce the height for medium screens */
+        max-width: 200px; /* Narrower width */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .gallery-col, .wide {
+        height: 200px; /* Reduce height for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .header-container > h1 {
+        font-size: 2rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .gallery-col, .image-container, .wide {
+        height: 200px; /* Smaller height for small screens */
+    }
+
+    .double-image-container .image-item {
+        height: 150px; /* Smaller height for images in double container */
+    }
+
+    .view-more-btn {
+        font-size: 0.9rem;
+    }
 }
