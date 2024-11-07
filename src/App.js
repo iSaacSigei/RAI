@@ -7,7 +7,7 @@ import About from './components/Client/About';
 import WhoWeServe from './components/Client/WhoWeServe';
 import Resources from './components/Client/Resources';
 import Events from './components/Client/Events';
-import Team from './components/Client/LandingPage/Team';
+import OurTeam from './components/Client/OurTeam';
 import Blog from './components/Client/Blog';
 import Contact from './components/Client/Contact';
 import Footer from './components/Client/Footer';
@@ -24,7 +24,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/community" element={<Resources />} />
           <Route path='/courses' element={<CoursesPage/>}/>
-          <Route path="/team" element={<Team />} />
+          <Route path="/team" element={<OurTeam />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
