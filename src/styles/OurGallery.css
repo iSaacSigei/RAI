@@ -17,48 +17,50 @@
 .header-container {
     flex: 1;
 }
-.header-container > h1{
+
+.header-container > h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
-.image-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* Align the image to the right */
+
+.image-container, .gallery-col, .double-image-container .image-item {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 }
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
+.image-container {
+    flex: 1;
+    height: 350px; /* Define height for the first row image */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
 }
 
 /* Grid container for gallery-rows 2 and 3 */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Create 4 equal gallery-columns */
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
     gap: 20px; /* 20px gap between grid items */
     justify-items: end; /* Align items to the right */
 }
 
 .gallery-col {
-    display: flex;
-    justify-content: flex-end; /* Align images to the right */
+    height: 250px; /* Set a fixed height for the gallery images */
+    background-size: cover;
+    background-position: center;
 }
 
 .empty {
-    flex: 1; /* Empty gallery-column */
+    height: 250px;
+    flex: 1; /* Empty gallery column */
 }
 
-.single-image {
-    display: flex;
-    flex-direction: column; /* Stack the images vertically */
-}
-
-.image-container-bottom {
+.single-image .image-container-bottom {
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: flex-end; /* Align the image to the bottom */
-    height: 100%; /* Fill the gallery-column */
 }
 
 .top-empty {
@@ -68,22 +70,16 @@
 .double-image-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Add gap between the two images */
+    gap: 10px;
 }
 
-.double-image-container img {
-    width: 100%;
+.double-image-container .image-item {
+    height: 150px; /* Set height for each image in the double-image container */
 }
 
 .wide {
-    grid-column: span 2; /* Make this gallery-column wider in the grid */
-}
-
-/* Additional styling for images in gallery-row 3 */
-.grid-container img {
-    margin-bottom: 20px; /* Add bottom margin for images in gallery-row 3 */
-    max-width: 100%; /* Ensure images do not overflow */
-    height: auto; /* Maintain aspect ratio */
+    grid-column: span 2; /* Make this column wider in the grid */
+    height: 250px; /* Define height */
 }
 
 .view-more-btn {
