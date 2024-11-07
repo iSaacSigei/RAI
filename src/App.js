@@ -7,7 +7,7 @@ import About from './components/Client/About';
 import WhoWeServe from './components/Client/WhoWeServe';
 import Resources from './components/Client/Resources';
 import Events from './components/Client/Events';
-import Team from './components/Client/LandingPage/Team';
+import Team from './components/Client/Team';
 import Blog from './components/Client/Blog';
 import Contact from './components/Client/Contact';
 import Footer from './components/Client/Footer';

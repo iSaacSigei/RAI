@@ -5,7 +5,7 @@ import Courses from './LandingPage/Courses';
 import OurMission from './LandingPage/OurMission';
 import OurPartners from './LandingPage/OurPartners';
 import Testimonials from './LandingPage/Testimonials';
-import Team from './LandingPage/Team';
+import Team from './LandingPage/OurTeam';
 import OurGallery from './LandingPage/OurGallery';
 
 const Home = () => {
