@@ -25,7 +25,7 @@ const OurMission = () => {
        
       </div>
       {/* Vision Statement */}
-      <div data-aos="fade-left" className="max-w-4xl mx-auto text-white bg-[#1B4F72] p-5 rounded-lg shadow-lg mt-3 md:mt-0">
+      <div data-aos="fade-left" className="max-w-4xl mx-auto text-white bg-[#1B4F72] p-5 rounded-lg shadow-lg  ">
         <p className="text-lg leading-8">
           Our vision is a world where AI is developed and used in a way that respects human rights and promotes social good. We believe that AI has the potential to transform society for the better, but only if it is developed and used ethically.
         </p>

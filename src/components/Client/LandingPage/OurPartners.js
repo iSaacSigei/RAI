@@ -14,8 +14,6 @@ import railsImage from '../../../images/ourpartners/Rails.png';
 import golangImage from '../../../images/ourpartners/golang.png';
 import mongodbImage from '../../../images/ourpartners/mongodb.png';
 
-
-//Initialize Images
 const imagesTop = [
   { src: nodeImage, alt: "Node" },
   { src: phpImage, alt: "PHP" },
@@ -34,29 +32,36 @@ const imagesBottom = [
 const OurPartners = () => {
   const headingControls = useAnimation();
   const imageControls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref: headerRef, inView: headerInView } = useInView({ threshold: 0.2 });
+  const { ref: containerRef, inView: containerInView } = useInView({ threshold: 0.2 });
 
   React.useEffect(() => {
-    if (inView) {
+    if (headerInView) {
       headingControls.start({
         opacity: 1,
         y: 0,
         transition: { duration: 1.5, ease: [0.42, 0, 0.58, 1] },
       });
+    } else {
+      headingControls.start({ opacity: 0, y: -50 });
+    }
+  }, [headerInView, headingControls]);
+
+  React.useEffect(() => {
+    if (containerInView) {
       imageControls.start((index) => ({
         opacity: 1,
         y: 0,
         transition: { delay: index * 0.15, duration: 1, ease: [0.42, 0, 0.58, 1] },
       }));
     } else {
-      headingControls.start({ opacity: 0, y: -50 });
       imageControls.start({ opacity: 0, y: 30 });
     }
-  }, [inView, headingControls, imageControls]);
+  }, [containerInView, imageControls]);
 
   return (
-    <div className="ourPartners-wrapper bg-[#f4f4f9] text-gray-500 py-4" ref={ref}>
-      <div className="text-center mb-24 mt-14">
+    <div className="ourPartners-wrapper text-gray-500 py-8" ref={headerRef}>
+      <div className="text-center mb-48 mt-14">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={headingControls}
@@ -67,7 +72,7 @@ const OurPartners = () => {
         </motion.div>
       </div>
 
-      <div className="partnersContainer pb-4">
+      <div className="partnersContainer pb-4" ref={containerRef}>
         <div className="topPartners flex justify-center space-x-3 mb-6">
           {imagesTop.map((image, index) => (
             <motion.img

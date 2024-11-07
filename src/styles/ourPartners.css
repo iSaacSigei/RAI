@@ -1,4 +1,7 @@
-
+.ourPartnersWrapper {
+    background: #f4f4f9;
+  }
+  
   .partnersHeader {
     position: relative;
     display: inline-block;
@@ -16,6 +19,7 @@
     height: 4px;
     background: linear-gradient(90deg, #721975, #feb47b);
     border-radius: 2px;
+    margin-bottom: 20px;
   }
   
   

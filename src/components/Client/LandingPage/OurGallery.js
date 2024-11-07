@@ -15,8 +15,8 @@ const OurGallery = () => {
           <h1>Check Out Our Gallery</h1>
           <p>Explore our gallery-collection of images showcasing our work and events.</p>
         </div>
-        <div className="image-container">
-          <img src={Image1} alt="Gallery" width="350" />
+        <div className="image-container" style={{ backgroundImage: `url(${Image1})` }}>
+          {/* Background image is now set with inline style */}
         </div>
       </div>
 
@@ -25,17 +25,14 @@ const OurGallery = () => {
         <div className="grid-container">
           <div className="gallery-col empty"></div>
           <div className="gallery-col single-image">
-            <div className="image-container-bottom">
+            <div className="image-container-bottom" style={{ backgroundImage: `url(${Image2})` }}>
               <div className="top-empty" /> {/* Empty div for spacing */}
-              <img src={Image2} alt="Gallery"/>
             </div>
           </div>
-          <div className="gallery-col">
-            <img src={Image3} alt="Gallery" />
-          </div>
+          <div className="gallery-col" style={{ backgroundImage: `url(${Image3})` }}></div>
           <div className="gallery-col double-image-container">
-            <img src={Image4} alt="Gallery" />
-            <img src={Image5} alt="Gallery" />
+            <div style={{ backgroundImage: `url(${Image4})` }} className="image-item"></div>
+            <div style={{ backgroundImage: `url(${Image5})` }} className="image-item"></div>
           </div>
         </div>
       </div>
@@ -43,22 +40,17 @@ const OurGallery = () => {
       {/* gallery-row 3 */}
       <div className="gallery-row">
         <div className="grid-container">
-          <div className="gallery-col">
-            <img src={Image1} alt="Gallery" />
-          </div>
-          <div className="gallery-col">
-            <img src={Image2} alt="Gallery" />
-          </div>
-          <div className="gallery-col wide">
-            <img src={Image4} alt="Gallery" />
-          </div>
+          <div className="gallery-col" style={{ backgroundImage: `url(${Image1})` }}></div>
+          <div className="gallery-col" style={{ backgroundImage: `url(${Image2})` }}></div>
+          <div className="gallery-col wide" style={{ backgroundImage: `url(${Image4})` }}></div>
         </div>
       </div>
-        {/* View More Button */}
-        <div className="view-more-btn">
-            View More
+      
+      {/* View More Button */}
+      <div className="view-more-btn">
+        View More
         <span className="arrow">→</span>
-        </div>
+      </div>
     </div>
   );
 };

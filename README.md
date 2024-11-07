@@ -68,7 +68,6 @@ src/
 ├───images/            # Folder for image assets
 └───styles/            # Global and component-specific styles
 
-
 ```
 ## Color Codes
 button background #227AFF, headers #212529, foote bg #173780

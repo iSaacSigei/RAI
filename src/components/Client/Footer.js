@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../images/Logo.png'; // Ensure the correct path
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaTiktok, FaYoutube } from 'react-icons/fa';
 
@@ -15,7 +16,7 @@ const Footer = () => {
             RECEIVE NEWS
           </button>
           <button className="px-6 py-2 sm:px-8 sm:py-3 bg-white text-black font-light rounded-md border border-gray-400">
-            DONATE
+            <Link to="/donate">DONATE</Link>
           </button>
         </div>
       </div>
