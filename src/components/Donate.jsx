@@ -20,7 +20,7 @@ const Donate = () => {
       <h2 className='text-center text-white text-xl m-3'>Donate</h2>
       <hr className='w-[50%] m-auto h-1  bg-white'/>
 
-    <form className='border p-5 m-4 border-slate-200 rounded-xl flex flex-col' onSubmit={handleSubmit}>
+    <form className='border md:p-5 md:m-4 border-slate-200 rounded-xl flex flex-col' onSubmit={handleSubmit}>
       <label className='text-white md:text-xl mt-2' htmlFor="phone">Phone Number:</label>
       <input
         type="text"
