@@ -146,7 +146,7 @@ function About() {
          <h1 className='text-center'>Why it works</h1>
       <hr className='bg-[#800080] h-1 m-auto w-[40%]'/>
 
-         <div className='grid grid-cols-3 gap-3'>
+         <div className='md:grid md:grid-cols-3 gap-3'>
          <div className=' p-3'>
         
          <img src={pl} alt="Description 2" />
