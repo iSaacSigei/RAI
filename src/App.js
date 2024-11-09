@@ -13,6 +13,7 @@ import Contact from './components/Client/Contact';
 import Footer from './components/Client/Footer';
 import CoursesPage from './components/Client/CoursesPage';
 import Donate from './components/Donate';
+import Gallery from './components/Client/Gallery';
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/who-we-serve" element={<WhoWeServe />} />
           <Route path="/events" element={<Events />} />
           <Route path="/community" element={<Resources />} />
+          <Route path='/gallery' element={<Gallery/>}/>
           <Route path='/courses' element={<CoursesPage/>}/>
           <Route path="/team" element={<OurTeam />} />
           <Route path="/blog" element={<Blog />} />
