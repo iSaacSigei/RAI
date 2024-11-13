@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Events = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
   const [search, setSearch] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,7 +57,7 @@ const Events = () => {
   );
 
   return (
-    <div className="container mx-auto mt-[130px] p-5 font-sans">
+    <div className="container mx-auto mt-[100px] p-5 font-sans" data-aos="fade-up">
       <h1 className="text-2xl font-bold">Insight from our team</h1>
       <p className="text-gray-600">Powerful Trading Tools and Features for Experienced Investors</p>
         
