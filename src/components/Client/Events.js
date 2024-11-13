@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import { useHistory } from 'react-router-dom'; // If using React Router for navigation
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Events = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   const [search, setSearch] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,7 +70,7 @@ const Events = () => {
   );
 
   return (
-    <div className="p-5 font-sans mt-[130px]"> {/* Added margin top of 130px */}
+    <div className="p-5 font-sans mt-[100px]" data-aos="fade-up"> {/* Added margin top of 130px */}
       <h1 className="text-2xl font-bold">Upcoming Events</h1>
       <p className="text-gray-600">Powerful Trading Tools and Features for Experienced Investors</p>
       
