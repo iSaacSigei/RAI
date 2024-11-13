@@ -7,7 +7,7 @@ import OurPartners from './LandingPage/OurPartners';
 import Testimonials from './LandingPage/Testimonials';
 import Team from './LandingPage/Team';
 import OurGallery from './LandingPage/OurGallery';
-
+import JoinUs from './LandingPage/JoinUs';
 const Home = () => {
   return (
     <div>
@@ -19,6 +19,7 @@ const Home = () => {
       <OurMission/>
       <OurPartners/>
       <Team/>
+      <JoinUs/>
     </div>
   )
 }

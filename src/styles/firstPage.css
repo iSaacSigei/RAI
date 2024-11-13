@@ -1,21 +1,13 @@
-/* Basic reset */
-* {
+html, body {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-}
-
-body, html, #root {
-    /* height: 100%; */
-    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 .landing-page {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 81, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 
@@ -45,9 +37,9 @@ body, html, #root {
 }
 
 .message-section p {
-    font-size: 1.5rem; /* Responsive font size */
+    font-size: 1.2rem; /* Responsive font size */
     max-width: 100%; /* Allow full width for smaller screens */
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.0rem;
 }
 
 .cta-button {
@@ -70,15 +62,13 @@ body, html, #root {
 .cards-section {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 0.7rem 0;
-    position: relative;
+    width: auto; /* or max-width: 100%; to ensure it fits within the viewport */
+    padding: 0.7rem;
 }
 
 .cards {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px); /* Background blur */
-    border: 1px solid #fff;
     padding: 1.5rem;
     flex: 1;
     margin: 0 0.5rem;
