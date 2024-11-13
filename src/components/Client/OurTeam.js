@@ -62,33 +62,33 @@ const OurTeam = () => {
     <main className='mt-[130px] p-3' data-aos="fade-up">
       <h1 className='text-center'>Our Team</h1>
       <p className='text-3xl text-center'>Meet the RAI team</p>
-      <p className='text-center text-sm'>
+      <p className='text-center'>
         Our team is made up of professionals who are passionate about their work. We are dedicated to providing the best services to our clients.
       </p>
-    {/* Team Members Grid */}
-    <div className="grid md:grid-cols-4 gap-5 md:m-5">
-      {otherMembers.map(member => (
-        <div 
-          key={member.id} 
-          className="border border-slate-500 p-3 flex flex-col items-center rounded-lg shadow-md transition-transform duration-300 hover:shadow-lg hover:scale-105 bg-white"
-        >
-          <img 
-            src={member.image} 
-            alt={member.name} 
-            className="w-[150px] h-[200px] rounded-md object-cover mb-4"
-          />
-          <h2 className="text-xl font-semibold text-gray-800 mb-1">{member.name}</h2>
-          <p className="text-lg text-gray-500 mb-2">{member.title}</p>
-          <p className="text-sm text-gray-600 text-center mb-4 px-3">{member.description}</p>
-          <div className="flex gap-3">
-            <ImLinkedin className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
-            <FaSquareInstagram className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
-            <FaTwitterSquare className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
-            <FaFacebookSquare className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
+      {/* Team Members Grid */}
+      <div className="grid md:grid-cols-4 gap-5 md:m-5">
+        {otherMembers.map(member => (
+          <div 
+            key={member.id} 
+            className="border border-slate-500 p-3 flex flex-col items-center rounded-sm bg-white shadow-[0_4px_10px_rgba(0,0,0,0.15)] transition-transform duration-300 hover:shadow-[0_8px_20px_rgba(0,0,0,0.2)] hover:scale-105"
+          >
+            <img 
+              src={member.image} 
+              alt={member.name} 
+              className="w-[150px] h-[200px] rounded-md object-cover mb-4"
+            />
+            <h2 className="text-xl font-semibold text-gray-800 mb-1">{member.name}</h2>
+            <p className="text-lg text-gray-500 mb-2">{member.title}</p>
+            <p className="text-sm text-gray-600 text-center mb-4 px-3">{member.description}</p>
+            <div className="flex gap-3">
+              <ImLinkedin className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
+              <FaSquareInstagram className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
+              <FaTwitterSquare className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
+              <FaFacebookSquare className="text-[#800080] text-2xl hover:text-purple-800 transition-colors duration-200" />
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
 
 
     {/* CEO Section */}

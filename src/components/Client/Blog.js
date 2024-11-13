@@ -101,7 +101,7 @@ const Events = () => {
               <button 
                 key={topic} 
                 onClick={() => handleTopicClick(topic)} 
-                className={`px-3 py-1 border rounded-full ${selectedTopic === topic ? 'bg-purple-600 text-white' : 'border-gray-300'}`}
+                className={`px-3 py-1 border rounded-full ${selectedTopic === topic ? 'bg-[#800080] text-white' : 'border-gray-300'}`}
               >
                 {topic}
               </button>
@@ -125,14 +125,14 @@ const Events = () => {
                   <p className="text-gray-500 mt-1">By {event.speaker} • 7 min read</p>
                   <button 
                     onClick={() => handleBookNow(event.id)} 
-                    className="mt-2 px-3 py-1 text-white bg-purple-600 rounded"
+                    className="mt-2 px-3 py-1 text-white bg-[#800080] rounded"
                   >
                     Read More
                   </button>
                 </div>
                 
                 {/* Right-side purple graphic */}
-                <div className="relative w-32 h-32 rounded-full bg-purple-600 mt-5 lg:mt-0 lg:ml-5">
+                <div className="relative w-32 h-32 rounded-full bg-[#800080] mt-5 lg:mt-0 lg:ml-5">
                   <div className="absolute bottom-4 right-4 w-20 h-20 bg-white rounded-full"></div>
                 </div>
               </div>
@@ -152,7 +152,7 @@ const Events = () => {
                 className="p-2 border border-gray-300 rounded mb-3 lg:mb-0 lg:mr-2 w-full lg:w-auto" 
                 required
               />
-              <button type="submit" className="px-3 py-1 text-white bg-purple-600 rounded"> Submit</button>
+              <button type="submit" className="px-3 py-1 text-white bg-[#800080] rounded"> Submit</button>
             </form>
             <p className="text-xs text-gray-500 mt-2">*You can unsubscribe anytime</p>
           </section>
