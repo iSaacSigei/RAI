@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/coursesPage.css';
 import courseImage from '../../images/BG1.png';
 import { AiFillStar, AiOutlineCheck } from 'react-icons/ai';
 import RelatedCourses from './RelatedCourses';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const CoursesPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
   const [activeTab, setActiveTab] = useState('description');
 
   return (
-    <div className="courses-page-container">
+    <div className="courses-page-container"data-aos="fade-up">
       {/* Section 1: Course Details */}
       <div className="course-details-section">
         <div className="course-image-column">
