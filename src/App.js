@@ -12,7 +12,7 @@ import Blog from './components/Client/Blog';
 import Contact from './components/Client/Contact';
 import Footer from './components/Client/Footer';
 import CoursesPage from './components/Client/CoursesPage';
-import Donate from './components/Donate';
+import Donate from './components/Client/DonatePage';
 import Gallery from './components/Client/Gallery';
 function App() {
   return (

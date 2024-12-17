@@ -1,0 +1,226 @@
+/* Parent container styles */
+.donate-page {
+    background-color: #800080;
+    /* margin-top: 100px !important; */
+    padding: 2rem;
+    margin-bottom: 200px;
+    position: relative;
+    height: 80vh; /* Parent container height */
+  }
+  
+  .donate-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Child container styles */
+  .donate-content {
+    background-color: #800080;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 10px;
+    position: absolute; /* Floating over the container */
+    bottom: -100px; /* Extends beyond the parent container */
+    z-index: 2; /* Above the decorative circles */
+    height: 80vh; /* Matches the full viewport height */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  /* Decorative Circles */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -3;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+  
+  .circle-left {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: -20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+  }
+  
+  .circle-right {
+    width: 150px;
+    height: 150px;
+    top: 58%;
+    left: 468px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+  }
+  /* Left Column */
+  .donate-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: white;
+    z-index: 2;
+  }
+  
+  .donate-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .donate-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .donate-button {
+    background-color: #ffffff;
+    color: #800080;
+    width: 200px;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .donate-button:hover {
+    background-color: #5e005e;
+    color: white;
+  }
+  
+  .donate-raised {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  /* Right Column */
+  .donate-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  /* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .donate-content {
+        grid-template-columns: 1fr;
+        height: auto; /* Allow content to adjust dynamically */
+        padding: 2rem;
+    }
+    .donate-page{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .circle-left {
+        top: 1%;
+        left: -20px;
+    }
+
+    .donate-text {
+        text-align: center; /* Center align text for smaller screens */
+    }
+
+    .donate-image img {
+        margin-top: 1.5rem;
+    }
+
+    .donate-button {
+        margin: 0 auto; /* Center the button */
+    }
+}
+/* Modal Overlay */
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+.modal {
+    background-color: #800080;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 10px;
+    position: absolute; /* Floating over the container */
+    bottom: -100px; /* Extends beyond the parent container */
+    height: 80vh; /* Matches the full viewport height */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+  z-index: 1001;
+  display: block !important; /* Force visibility */
+}
+
+  
+  
+  .modal h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  /* Payment Options Buttons */
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .payment-button {
+    background-color: #800080;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .payment-button:hover {
+    background-color: #5e005e;
+  }
+  
+  /* Close Modal Button */
+  .close-modal {
+    background-color: transparent;
+    color: #800080;
+    border: 1px solid #800080;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .close-modal:hover {
+    background-color: #800080;
+    color: white;
+  }
+  
