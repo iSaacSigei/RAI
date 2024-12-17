@@ -1,9 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "../../styles/DonatePage.css"; // Custom CSS for this page
 import Modal from "react-modal";
 import image from "../../images/Donate.webp";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const DonatePage = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-in-out',
+          once: true,
+        });
+      }, []);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => setModalIsOpen(true);
@@ -14,7 +22,7 @@ const DonatePage = () => {
   console.log("Modal is open:", modalIsOpen);
 
   return (
-    <main className="donate-page">
+    <main className="donate-page" data-aos="fade-up">
       <div className="donate-container">
         {/* Content Section */}
         <div className="donate-content">
