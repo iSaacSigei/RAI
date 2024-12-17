@@ -8,29 +8,42 @@ const OurMission = () => {
   }, []);
 
   return (
-    <main className="bg-[#157FA8] py-10 px-5">
+    <main className="py-20 px-5">
       {/* Title */}
-      <div data-aos="fade-up">
-        <p className="md:text-5xl text-2xl text-center text-[#ffffff] font-bold mb-10">Our Mission and Vision</p>
-      </div>
-
-      {/* Mission Statement */}
-<div className='md:grid md:grid-cols-2 gap-2'>
-
-
-      <div data-aos="fade-right" className="max-w-4xl mx-auto text-white bg-[#1B4F72] p-5 rounded-lg shadow-lg">
-        <p className="text-lg leading-8">
-          Our mission is to promote responsible AI development and use, ensuring that AI is developed and used in a way that respects human rights and promotes social good. We believe that AI has the potential to transform society for the better, but only if it is developed and used ethically.
+      <div>
+        <p className="md:text-5xl text-4xl mb-10 text-center font-semibold">
+          Our Mission and Vision
         </p>
-       
       </div>
-      {/* Vision Statement */}
-      <div data-aos="fade-left" className="max-w-4xl mx-auto text-white bg-[#1B4F72] p-5 rounded-lg shadow-lg  ">
-        <p className="text-lg leading-8">
-          Our vision is a world where AI is developed and used in a way that respects human rights and promotes social good. We believe that AI has the potential to transform society for the better, but only if it is developed and used ethically.
-        </p>
-       
-      </div>
+
+      {/* Mission and Vision Section */}
+      <div className="md:grid md:grid-cols-2 gap-4">
+        {/* Mission Statement */}
+        <div
+          data-aos="fade-right"
+          className="min-h-[40vh] flex items-center justify-center max-w-4xl mx-auto text-white p-8 rounded-lg shadow-lg bg-gradient-to-r from-[#154360] to-[#1B4F72] mb-4 md:mb-0"
+        >
+          <p className="text-lg leading-8">
+            Our mission is to promote responsible AI development and use,
+            ensuring that AI is developed and used in a way that respects human
+            rights and promotes social good. We believe that AI has the
+            potential to transform society for the better, but only if it is
+            developed and used ethically.
+          </p>
+        </div>
+
+        {/* Vision Statement */}
+        <div
+          data-aos="fade-left"
+          className="min-h-[40vh] flex items-center justify-center max-w-4xl mx-auto text-white p-8 rounded-lg shadow-lg bg-gradient-to-r from-[#11374D] to-[#154360]"
+        >
+          <p className="text-lg leading-8">
+            Our vision is a world where AI is developed and used in a way that
+            respects human rights and promotes social good. We believe that AI
+            has the potential to transform society for the better, but only if
+            it is developed and used ethically.
+          </p>
+        </div>
       </div>
     </main>
   );
