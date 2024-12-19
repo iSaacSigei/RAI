@@ -34,8 +34,11 @@
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
-  }
-  
+    /* Refined border and shadow */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle light border */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2), /* Larger shadow */
+                0px 4px 6px rgba(0, 0, 0, 0.1); /* Smaller inner shadow */
+}
   /* Decorative Circles */
   .circle {
     position: absolute;

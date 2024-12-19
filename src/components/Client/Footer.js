@@ -5,19 +5,20 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter, FaTiktok, FaYoutube } from 'react
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0B3A75] text-white py-12 px-6 sm:py-16 sm:px-12 lg:px-16">
+    <footer className="bg-[#330033] text-white py-12 px-6 sm:py-16 sm:px-12 lg:px-16">
       {/* Title Section */}
       <div className="text-center mb-10">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
           Leading the Way in AI Ethics and <br className="hidden lg:block" /> Responsibility
         </h2>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <button className="px-6 py-2 sm:px-8 sm:py-3 bg-[#173780] text-white font-light rounded-md border border-gray-400">
+          <button className="px-6 py-2 sm:px-8 sm:py-3  text-white font-light rounded-md border border-gray-400">
             RECEIVE NEWS
           </button>
-          <button className="px-6 py-2 sm:px-8 sm:py-3 bg-white text-black font-light rounded-md border border-gray-400">
-            <Link to="/donate">DONATE</Link>
+          <Link to="/donate"><button className="px-6 py-2 sm:px-8 sm:py-3 bg-white text-black font-light rounded-md border border-gray-400">
+            DONATE
           </button>
+          </Link>
         </div>
       </div>
 
