@@ -5,6 +5,7 @@ import Image2 from '../../../images/How-can-technology-help-teachers-in-the-clas
 import Image3 from '../../../images/Implementing-active-learning-and-student-centered-pedagogy.jpg';
 import Image4 from '../../../images/a1b7e5_7e8bcb716d834bb596b645a1a943db3e~mv2.webp';
 import Image5 from '../../../images/classroom-st-georges-school-in-rajasthan-jaisalmer-rajasthan-india-2N57HE2.jpg';
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const OurGallery = () => {
   return (
@@ -47,10 +48,10 @@ const OurGallery = () => {
       </div>
       
       {/* View More Button */}
-      <div className="view-more-btn">
+      <Link to="/gallery" className="view-more-btn">
         View More
         <span className="arrow">→</span>
-      </div>
+      </Link>
     </div>
   );
 };

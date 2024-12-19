@@ -17,11 +17,11 @@ const OurMission = () => {
       </div>
 
       {/* Mission and Vision Section */}
-      <div className="md:grid md:grid-cols-2 gap-4">
+      <div className="md:grid md:grid-cols-2 gap-4 items-stretch">
         {/* Mission Statement */}
         <div
           data-aos="fade-right"
-          className="min-h-[40vh] flex items-center justify-center max-w-4xl mx-auto text-white p-8 rounded-lg shadow-lg bg-gradient-to-r from-[#154360] to-[#1B4F72] mb-4 md:mb-0"
+          className="lg:min-h-[40vh] flex items-center justify-center max-w-4xl mx-auto text-white p-8 rounded-lg shadow-lg bg-gradient-to-r from-[#154360] to-[#1B4F72]"
         >
           <p className="text-lg leading-8">
             Our mission is to promote responsible AI development and use,
@@ -35,7 +35,7 @@ const OurMission = () => {
         {/* Vision Statement */}
         <div
           data-aos="fade-left"
-          className="min-h-[40vh] flex items-center justify-center max-w-4xl mx-auto text-white p-8 rounded-lg shadow-lg bg-gradient-to-r from-[#11374D] to-[#154360]"
+          className="lg:min-h-[40vh] flex items-center justify-center max-w-4xl mx-auto text-white p-8 rounded-lg shadow-lg bg-gradient-to-r from-[#11374D] to-[#154360]"
         >
           <p className="text-lg leading-8">
             Our vision is a world where AI is developed and used in a way that

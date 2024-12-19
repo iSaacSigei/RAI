@@ -60,8 +60,8 @@ const OurPartners = () => {
   }, [containerInView, imageControls]);
 
   return (
-    <div className="ourPartners-wrapper text-gray-500 py-8" ref={headerRef}>
-      <div className="text-center mb-48 mt-14">
+    <div className="ourPartners-wrapper bg-[#f4f4f9] text-gray-500 py-8 mb-10" ref={headerRef}>
+      <div className="text-center mb-28 mt-14">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={headingControls}
