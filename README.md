@@ -39,14 +39,17 @@ To learn more about React, visit the official [React documentation](https://reac
 ```bash
 src/
 ├───components/
-│   ├───Admin/         # Admin-related components ------- For blog and events updates
+│   ├───Admin/         # Admin-related components
+│   │   ├───AdminLogin.js     # Isaac - Admin login page /admin_only_login
+│   │   ├───AdminPage.js      # Isaac - Admin dashboard page /admin_only_dashboard
 │   └───Client/        # Client-side components
 │       ├───About.js           # Gideon - About page
 │       ├───Blog.js            # Duncan - Blog page
 │       ├───Contact.js         # Gideon - Contact page
 │       ├───Events.js          # Duncan - Events page
 │       ├───Footer.js          # Duncan - Footer section for landing page
-│       ├───Gallery.js         # Gitonga - Gallery section
+│       ├───Gallery.js         # Isaac - Gallery section
+│       ├───Donate.jsx         # Isaac - Donate page
 │       ├───OurTeam.js         # Eyinda - Team page (for all team members including ambassadors)
 │       ├───LandingPage/       # Landing page sections
 │       │   ├───Courses.js         # Isaac - Courses section
