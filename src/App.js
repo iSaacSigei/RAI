@@ -14,12 +14,16 @@ import Footer from './components/Client/Footer';
 import CoursesPage from './components/Client/CoursesPage';
 import Donate from './components/Client/DonatePage';
 import Gallery from './components/Client/Gallery';
+import AdminLogin from './components/Admin/AdminLogin';
+import AdminPage from './components/Admin/AdminPage';
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
         <Routes>
+          <Route path='/admin_only_login' element={<AdminLogin/>}/>
+          <Route path='/admin_only_dashboard' element={<AdminPage/>}/>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/who-we-serve" element={<WhoWeServe />} />
