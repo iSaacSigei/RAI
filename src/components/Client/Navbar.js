@@ -116,10 +116,10 @@ const Navbar = () => {
                 <span>Who we Serve</span> <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
               <ul>
-                <li><Link to="#">Responsible AI for Students</Link></li>
-                <li><Link to="#">Responsible AI for Kids</Link></li>
-                <li><Link to="#">Responsible AI for Developers</Link></li>
-                <li><Link to="#">Responsible AI for Business</Link></li>
+                <li><Link to="#">Students</Link></li>
+                <li><Link to="#">Kids</Link></li>
+                <li><Link to="#">Developers</Link></li>
+                <li><Link to="#">Business Sector</Link></li>
               </ul>
             </li>            <li><Link to="/courses" className={isActive('/courses')} onClick={handleLinkClick}>Courses</Link></li>
             <li><Link to="/events" className={isActive('/events')} onClick={handleLinkClick}>Events</Link></li>
