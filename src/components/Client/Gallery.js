@@ -23,6 +23,7 @@ const Gallery = () => {
         { id: 10, date: "2024-11-22", event: "Tech Conference", src: image, height: 350 },
         { id: 6, date: "2024-11-10", event: "Team Meetup", src: image, height: 220 },
         { id: 7, date: "2024-11-10", event: "Team Meetup", src: image, height: 270 },
+        { id: 11, date: "2024-11-10", event: "Team Meetup", src: image, height: 270 },
       ]);
       setIsLoading(false);
     }, 2000);
