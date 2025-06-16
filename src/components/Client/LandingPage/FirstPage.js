@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../../styles/firstPage.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -39,15 +40,19 @@ const backgroundColors = [
 
 const FirstPage = () => {
   const [currentMessage, setCurrentMessage] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % messages.length);
-    }, 9000); // Change to 15000 ms (15 seconds)
+    }, 9000);
   
     return () => clearInterval(interval);
   }, []);
-  
+
+  const handleGetStarted = () => {
+    navigate('/signUp');
+  };
 
   return (
     <div 
@@ -72,7 +77,7 @@ const FirstPage = () => {
           >
             <h1>{messages[currentMessage].title}</h1>
             <p>{messages[currentMessage].text}</p>
-            <button className="cta-button">Get Started</button>
+            <button className="cta-button" onClick={handleGetStarted}>Get Started</button>
           </motion.div>
         </motion.div>
       </AnimatePresence>
