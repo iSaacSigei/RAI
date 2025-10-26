@@ -65,7 +65,7 @@ const OurPartners = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={headingControls}
-          className="partnersHeader"
+          className="partners"
         >
           <p className="text-3xl text-gray-500 font-extralight">Our</p>
           <p className="text-3xl text-gray-500 font-extralight">Partners</p>

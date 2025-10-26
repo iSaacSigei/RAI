@@ -28,7 +28,7 @@
   position: absolute;
   background-color: var(--content-color);
   bottom: -50px;
-  padding: 20px;
+  padding: 10px;
   width: 80%;
   left: 10%;
   box-shadow: var(--box-shadow);
@@ -61,8 +61,9 @@
 }
 
 .custom-team-item-inner:hover .custom-team-content {
-  padding: 30px 20px 84px;
+  padding: 10px 10px 64px;
   background-color: var(--theme-color);
+  font-size: 12px;
 }
 
 .custom-team-item-inner:hover .custom-team-title {

@@ -1,0 +1,107 @@
+/* Manage Courses Container */
+.manage-courses {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manage-courses h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Form Styling */
+  .manage-courses form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .manage-courses form input,
+  .manage-courses form textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .manage-courses form input:focus,
+  .manage-courses form textarea:focus {
+    border-color: #800080;
+  }
+  
+  .manage-courses form label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .manage-courses form button {
+    padding: 10px 15px;
+    background: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .manage-courses form button:hover {
+    background: #993399;
+    transform: scale(1.05);
+  }
+  
+  /* Table Styling */
+  .manage-courses table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .manage-courses table th,
+  .manage-courses table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .manage-courses table th {
+    background: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .manage-courses table td button {
+    padding: 5px 10px;
+    background: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .manage-courses table td button:hover {
+    background: #993399;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .manage-courses form {
+      flex-direction: column;
+    }
+  
+    .manage-courses table {
+      font-size: 14px;
+    }
+  }
+  

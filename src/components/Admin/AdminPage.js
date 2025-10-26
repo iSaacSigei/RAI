@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBook, FaCalendarAlt, FaEnvelope, FaImages, FaUserCog, FaEdit, FaUserFriends, FaUser, FaSignOutAlt } from "react-icons/fa";
 import "../../styles/Admin.css";
-
+import ManageCourses from "./AdminRenderedComponents/ManageCourses";
 const AdminPage = () => {
   const [activeTab, setActiveTab] = useState("stats");
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Simulate login state
@@ -137,7 +137,7 @@ const AdminPage = () => {
 
         {/* Conditionally Rendered Content */}
         <div>
-          {activeTab === "courses" && <h2>Manage Courses Section</h2>}
+          {activeTab === "courses" && <ManageCourses />}
           {activeTab === "events" && <h2>Manage Events Section</h2>}
           {activeTab === "bookings" && <h2>Manage Bookings Section</h2>}
           {activeTab === "gallery" && <h2>Manage Gallery Section</h2>}

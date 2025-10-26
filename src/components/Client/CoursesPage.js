@@ -5,6 +5,8 @@ import { AiFillStar, AiOutlineCheck } from 'react-icons/ai';
 import RelatedCourses from './RelatedCourses';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SEOMetaTags, { pageConfigs } from '../SEOMetaTags';
+import { CourseSchema, EducationalOrganizationSchema } from '../StructuredData';
 const CoursesPage = () => {
   useEffect(() => {
     AOS.init({
@@ -15,8 +17,18 @@ const CoursesPage = () => {
   }, []);
   const [activeTab, setActiveTab] = useState('description');
 
+  const courseData = {
+    title: "Responsible AI for Developers",
+    description: "A course designed for developers looking to integrate ethical AI principles into their software development practices.",
+    duration: "5 Hours",
+    free: false
+  };
+
   return (
     <div className="courses-page-container"data-aos="fade-up">
+      <SEOMetaTags {...pageConfigs.courses} />
+      <CourseSchema course={courseData} />
+      <EducationalOrganizationSchema />
       {/* Section 1: Course Details */}
       <div className="course-details-section">
         <div className="course-image-column">

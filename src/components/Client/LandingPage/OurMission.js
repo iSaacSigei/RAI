@@ -16,8 +16,7 @@ const OurMission = () => {
         </p>
       </div>
 
-      {/* Mission and Vision Section */}
-      <div className="md:grid md:grid-cols-2 gap-4 items-stretch">
+      <div className="md:grid md:grid-cols-2 gap-4 items-stretch space-y-6 md:space-y-0">
         {/* Mission Statement */}
         <div
           data-aos="fade-right"
@@ -45,6 +44,7 @@ const OurMission = () => {
           </p>
         </div>
       </div>
+
     </main>
   );
 };

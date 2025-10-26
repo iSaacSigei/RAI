@@ -1,3 +1,24 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://raialliance.org/sitemap.xml
+
+# Disallow admin pages
+Disallow: /admin_only_login
+Disallow: /admin_only_dashboard
+
+# Allow important pages
+Allow: /courses
+Allow: /about
+Allow: /blog
+Allow: /events
+Allow: /gallery
+Allow: /team
+Allow: /contact
+Allow: /resources
+Allow: /donate
+Allow: /who-we-serve
+
+# Crawl delay
+Crawl-delay: 1

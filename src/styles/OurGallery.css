@@ -31,6 +31,8 @@
     justify-content: flex-end;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
     max-width: 330px; /* Initial width for the first image */
 }
 
@@ -44,6 +46,13 @@
     height: 250px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-col:hover {
+    transform: scale(1.02);
 }
 
 .empty {
@@ -56,6 +65,10 @@
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
 }
 
 .top-empty {
@@ -70,11 +83,29 @@
 
 .double-image-container .image-item {
     height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.double-image-container .image-item:hover {
+    transform: scale(1.05);
 }
 
 .wide {
     grid-column: span 2;
     height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.wide:hover {
+    transform: scale(1.02);
 }
 
 .view-more-btn {
