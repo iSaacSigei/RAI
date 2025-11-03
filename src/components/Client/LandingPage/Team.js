@@ -4,13 +4,15 @@ import { Col, Container, Nav, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faVimeo, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import PropTypes from "prop-types";
-import TeamImage from '../../../images/Instructor.png';
+import KevinImage from '../../../images/Kevin.JPG';
+import IsaacImage from '../../../images/Instructor.png';
+import FelixImage from '../../../images/Felix.png';
 
 const teamMembers = [
   {
-    img: TeamImage,
-    name: "KHAN SAHEB",
-    designation: "HR, LATO",
+    img: KevinImage,
+    name: "Kevin Kimutai",
+    designation: "Chairperson",
     socialLinks: [
       { icon: faTwitter, href: "#!" },
       { icon: faFacebook, href: "#!" },
@@ -18,9 +20,9 @@ const teamMembers = [
     ],
   },
   {
-    img: TeamImage,
-    name: "Ali Akbar",
-    designation: "HR, PIT",
+    img: IsaacImage,
+    name: "Isaac Sigei",
+    designation: "CTO",
     socialLinks: [
       { icon: faTwitter, href: "#!" },
       { icon: faFacebook, href: "#!" },
@@ -28,9 +30,9 @@ const teamMembers = [
     ],
   },
   {
-    img: TeamImage,
-    name: "Sadab Bean",
-    designation: "HR, INCA",
+    img: FelixImage,
+    name: "Felix Kemboi",
+    designation: "Assistant Chairperson",
     socialLinks: [
       { icon: faTwitter, href: "#!" },
       { icon: faFacebook, href: "#!" },
@@ -75,7 +77,7 @@ const TeamMember12 = () => {
           <div className="">
             <h3 className="custom-team-heading">Our Team</h3>
             <p className="custom-team-sub-heading mt-3 mb-5">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Meet the dedicated team behind RAI Alliance, working to promote responsible AI development.
             </p>
           </div>
 

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SEO from '../SEO';
 
 // Import React Icons
 import { FaLinkedin, FaFacebook, FaInstagram, FaDiscord, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
@@ -21,13 +20,6 @@ const Contact = () => {
       className="flex justify-center items-center min-h-screen bg-gray-100 p-8 mt-[100px]"
       data-aos="fade-up"
     >
-      <SEO
-        title="Contact | RAI Alliance"
-        description="Get in touch with RAI Alliance for courses, partnerships, and community initiatives in responsible AI."
-        path="/contact"
-        keywords="contact RAI Alliance, responsible AI contact"
-        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }]}
-      />
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg flex flex-col md:flex-row">
         {/* Left Sidebar - Contact Information */}
         <div className="md:w-1/3 w-full bg-[#800080] text-white p-8 rounded-t-lg md:rounded-t-none md:rounded-l-lg flex flex-col justify-between">

@@ -5,7 +5,8 @@ import { AiFillStar, AiOutlineCheck } from 'react-icons/ai';
 import RelatedCourses from './RelatedCourses';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import SEO from '../SEO';
+import SEOMetaTags, { pageConfigs } from '../SEOMetaTags';
+import { CourseSchema, EducationalOrganizationSchema } from '../StructuredData';
 const CoursesPage = () => {
   useEffect(() => {
     AOS.init({
@@ -16,29 +17,18 @@ const CoursesPage = () => {
   }, []);
   const [activeTab, setActiveTab] = useState('description');
 
+  const courseData = {
+    title: "Responsible AI for Developers",
+    description: "A course designed for developers looking to integrate ethical AI principles into their software development practices.",
+    duration: "5 Hours",
+    free: false
+  };
+
   return (
     <div className="courses-page-container"data-aos="fade-up">
-      <SEO
-        title="Responsible AI Courses | RAI Alliance"
-        description="Learn responsible AI: ethics, bias mitigation, privacy, and trustworthy AI development. Free introductory courses for all levels."
-        path="/courses"
-        keywords="responsible AI course, AI ethics course, AI courses, RAI Alliance course, trustworthy AI training"
-        type="website"
-        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Courses', path: '/courses' }]}
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'Course',
-          'name': 'Responsible AI for Developers',
-          'description': 'Ethical AI practices, bias mitigation, privacy, and responsible AI implementation for developers.',
-          'provider': {
-            '@type': 'Organization',
-            'name': 'RAI Alliance',
-            'sameAs': 'https://www.rai-alliance.org/'
-          },
-          'url': 'https://www.rai-alliance.org/courses',
-          'image': 'https://www.rai-alliance.org/logo512.png'
-        }}
-      />
+      <SEOMetaTags {...pageConfigs.courses} />
+      <CourseSchema course={courseData} />
+      <EducationalOrganizationSchema />
       {/* Section 1: Course Details */}
       <div className="course-details-section">
         <div className="course-image-column">

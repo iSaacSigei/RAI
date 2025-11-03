@@ -6,7 +6,7 @@ const JoinUs = () => {
   return (
     <div 
       className="join-us-container"
-      style={{ backgroundImage: `url(${backgroundImage})` }} // Set background image 
+      // style={{ backgroundImage: `url(${backgroundImage})` }} // Set background image 
     >
       <div className="join-us-column">
         <h2>BECOME RAI AMBASSADOR</h2>

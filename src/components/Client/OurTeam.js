@@ -2,49 +2,61 @@ import React, { useEffect } from 'react';
 import { ImLinkedin } from "react-icons/im";
 import { FaTwitterSquare, FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-import Instructor2 from '../../images/Instructor.png';
+import IsaacImage from '../../images/Instructor.png';
+import FelixImage from '../../images/Felix.png';
+import KevinImage from '../../images/Kevin.JPG';
+import PeterImage from '../../images/Peter.jpg';
+import JoshuaImage from '../../images/Joshua.jpg';
+import EyindaImage from '../../images/Eyinda.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import SEO from '../SEO';
+import SEOMetaTags, { pageConfigs } from '../SEOMetaTags';
+import { OrganizationSchema } from '../StructuredData';
 
 const teamMembers = [
   {
     id: 1,
-    name: "John Doe",
-    title: "CEO",
-    description: "John is the CEO of RAI. He has over 10 years of experience in the tech industry.",
-    image: Instructor2,
-    isCEO: true,
+    name: "Kevin Kimutai",
+    title: "Chairperson",
+    description: "Kevin leads RAI Alliance as Chairperson, driving our mission for responsible AI development and ethical technology practices.",
+    image: KevinImage,
+    isChairperson: true,
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Isaac Sigei",
     title: "CTO",
-    description: "Jane oversees technology strategy with over 12 years of experience in software development.",
-    image: Instructor2,
+    description: "Isaac oversees technology strategy and development, ensuring our platforms meet the highest standards of responsible AI implementation.",
+    image: IsaacImage,
   },
   {
-    id: 2,
-    name: "Jane Smith",
-    title: "CTO",
-    description: "Jane oversees technology strategy with over 12 years of experience in software development.",
-    image: Instructor2,
+    id: 3,
+    name: "Felix Kemboi",
+    title: "Assistant Chairperson",
+    description: "Felix supports organizational leadership and helps coordinate our responsible AI advocacy initiatives across different communities.",
+    image: FelixImage,
   },
   {
-    id: 2,
-    name: "Jane Smith",
-    title: "CTO",
-    description: "Jane oversees technology strategy with over 12 years of experience in software development.",
-    image: Instructor2,
+    id: 4,
+    name: "Peter Lokong",
+    title: "Partnership and Relation Manager",
+    description: "Peter manages partnerships and relationships, building strategic alliances to expand our responsible AI education reach.",
+    image: PeterImage,
   },
   {
-    id: 2,
-    name: "Jane Smith",
-    title: "CTO",
-    description: "Jane oversees technology strategy with over 12 years of experience in software development.",
-    image: Instructor2,
+    id: 5,
+    name: "Joshua Ngomeli",
+    title: "Policy Analyst",
+    description: "Joshua analyzes AI policies and regulations, ensuring our initiatives align with responsible AI governance frameworks.",
+    image: JoshuaImage,
   },
-  // Additional members as needed
+  {
+    id: 6,
+    name: "Eyinda Gideon",
+    title: "Graphic Designer",
+    description: "Eyinda creates visual content and designs that effectively communicate our responsible AI message and educational materials.",
+    image: EyindaImage,
+  },
 ];
 
 const OurTeam = () => {
@@ -56,20 +68,15 @@ const OurTeam = () => {
     });
   }, []);
 
-  const ceo = teamMembers.find(member => member.isCEO);
-  const otherMembers = teamMembers.filter(member => !member.isCEO);
+  const chairperson = teamMembers.find(member => member.isChairperson);
+  const otherMembers = teamMembers.filter(member => !member.isChairperson);
 
   return (
     <main className='mt-[130px] p-3' data-aos="fade-up">
-      <SEO
-        title="Our Team | RAI Alliance"
-        description="Meet the team behind RAI Alliance working to advance responsible AI."
-        path="/team"
-        keywords="RAI Alliance team, responsible AI team, AI ethics team"
-        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Our Team', path: '/team' }]}
-      />
+      <SEOMetaTags {...pageConfigs.team} />
+      <OrganizationSchema />
       <h1 className='text-center'>Our Team</h1>
-      <p className='text-3xl text-center'>Meet the RAI team</p>
+      <p className='text-3xl text-center'>Meet the RAI Alliance team</p>
       <p className='text-center'>
         Our team is made up of professionals who are passionate about their work. We are dedicated to providing the best services to our clients.
       </p>
@@ -99,21 +106,21 @@ const OurTeam = () => {
       </div>
 
 
-    {/* CEO Section */}
-      {ceo && (
+    {/* Chairperson Section */}
+      {chairperson && (
         <section className="mt-10 flex justify-center">
           <div className="bg-gradient-to-r from-gray-100 to-gray-500 p-10 rounded-lg shadow-xl max-w-4xl transform transition-transform hover:scale-105 duration-300">
             <div className="grid md:grid-cols-2 items-center">
               <img 
-                src={ceo.image} 
-                alt={ceo.name} 
+                src={chairperson.image} 
+                alt={chairperson.name} 
                 className="w-[300px] h-[400px] object-cover mb-5 md:mb-0 md:mr-8" 
               />
               <div className="text-center md:text-left">
-                <h2 className="text-4xl font-bold text-white mb-2">{ceo.name}</h2>
-                <p className="text-xl text-gray-200 italic mb-4">{ceo.title}</p>
+                <h2 className="text-4xl font-bold text-white mb-2">{chairperson.name}</h2>
+                <p className="text-xl text-gray-200 italic mb-4">{chairperson.title}</p>
                 <p className="text-gray-100 mb-6">
-                  {ceo.description}
+                  {chairperson.description}
                 </p>
                 <div className="flex justify-center space-x-4 mb-5">
                   <ImLinkedin className="text-white text-2xl hover:text-gray-300 transition-colors duration-200" />

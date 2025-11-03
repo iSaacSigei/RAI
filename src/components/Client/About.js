@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../styles/About.css';
+import SEOMetaTags, { pageConfigs } from '../SEOMetaTags';
+import { OrganizationSchema } from '../StructuredData';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Background from '../../images/BG1.png';
 import Image1 from '../../images/BG1.png';
@@ -62,13 +64,8 @@ function About() {
   }, []);
   return (
     <div className="about" data-aos="fade-up">
-      <SEO
-        title="About | RAI Alliance"
-        description="Learn about RAI Alliance’s mission to advance responsible, ethical, and trustworthy AI for all."
-        path="/about"
-        keywords="RAI Alliance About, responsible AI mission, ethical AI organization"
-        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }]}
-      />
+      <SEOMetaTags {...pageConfigs.about} />
+      <OrganizationSchema />
       {/* Background Image */}
       <img src={Background} alt="Background" className="responsive-bg-image" loading="lazy" />
       

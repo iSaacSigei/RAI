@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../../styles/OurGallery.css'; // Your custom CSS
-import Image1 from '../../../images/CA-Black-student-scores.jpg';
-import Image2 from '../../../images/How-can-technology-help-teachers-in-the-classroom_.jpg';
-import Image3 from '../../../images/Implementing-active-learning-and-student-centered-pedagogy.jpg';
-import Image4 from '../../../images/a1b7e5_7e8bcb716d834bb596b645a1a943db3e~mv2.webp';
-import Image5 from '../../../images/classroom-st-georges-school-in-rajasthan-jaisalmer-rajasthan-india-2N57HE2.jpg';
+import Image1 from '../../../images/RAI TEAM/IMG_1558.JPG';
+import Image2 from '../../../images/RAI TEAM/IMG_1560.JPG';
+import Image3 from '../../../images/RAI TEAM/IMG_1561.JPG';
+import Image4 from '../../../images/RAI TEAM/IMG_1562.JPG';
+import Image5 from '../../../images/RAI TEAM/IMG_1556.JPG';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const OurGallery = () => {

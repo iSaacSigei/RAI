@@ -1,4 +1,6 @@
 import React from 'react'
+import SEOMetaTags, { pageConfigs } from '../SEOMetaTags';
+import { OrganizationSchema, WebsiteSchema, EducationalOrganizationSchema } from '../StructuredData';
 import FirstPage from './LandingPage/FirstPage';
 import SecondPage from './LandingPage/SecondPage';
 import Courses from './LandingPage/Courses';
@@ -8,25 +10,21 @@ import Testimonials from './LandingPage/Testimonials';
 import Team from './LandingPage/Team';
 import OurGallery from './LandingPage/OurGallery';
 import JoinUs from './LandingPage/JoinUs';
-import SEO from '../SEO';
+
 const Home = () => {
   return (
     <div>
-      <SEO
-        title="RAI Alliance | Responsible AI for All"
-        description="RAI Alliance advocates for responsible AI. Explore ethical AI courses, resources, events, and community programs."
-        path="/"
-        keywords="RAI, RAI Alliance, Responsible AI, AI ethics, AI courses, responsible AI courses, trustworthy AI, ethical AI"
-        type="website"
-        breadcrumbs={[{ name: 'Home', path: '/' }]}
-      />
+      <SEOMetaTags {...pageConfigs.home} />
+      <OrganizationSchema />
+      <WebsiteSchema />
+      <EducationalOrganizationSchema />
       <FirstPage/>
       <SecondPage/>
       <OurGallery/>
       <Courses/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <OurMission/>
-      <OurPartners/>
+      {/* <OurPartners/> */}
       <Team/>
       <JoinUs/>
     </div>
