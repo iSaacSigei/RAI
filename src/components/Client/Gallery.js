@@ -3,6 +3,7 @@ import "../../styles/Gallery.css"; // Custom CSS for this page
 import AOS from "aos";
 import "aos/dist/aos.css";
 import image from '../../images/a1b7e5_7e8bcb716d834bb596b645a1a943db3e~mv2.webp';
+import SEO from '../SEO';
 
 const Gallery = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,13 @@ const Gallery = () => {
 
   return (
     <main className="gallery-page">
+      <SEO
+        title="Gallery | RAI Alliance"
+        description="Highlights from RAI Alliance events, workshops, and community programs."
+        path="/gallery"
+        keywords="RAI gallery, responsible AI events gallery"
+        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Gallery', path: '/gallery' }]}
+      />
       {isLoading ? (
         <div className="preloader">
           <div className="spinner"></div>

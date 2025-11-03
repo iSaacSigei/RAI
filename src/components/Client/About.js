@@ -14,6 +14,7 @@ import Instructor2 from '../../images/Instructor.png';
 import Instructor3 from '../../images/Instructor.png';
 import { GiSwirlString } from "react-icons/gi";
 import { MdAbc } from "react-icons/md";
+import SEO from '../SEO';
 
 function About() {
   const [currentIndex, setCurrentIndex] = useState(1); // Start with Instructor 1 in the center
@@ -61,6 +62,13 @@ function About() {
   }, []);
   return (
     <div className="about" data-aos="fade-up">
+      <SEO
+        title="About | RAI Alliance"
+        description="Learn about RAI Alliance’s mission to advance responsible, ethical, and trustworthy AI for all."
+        path="/about"
+        keywords="RAI Alliance About, responsible AI mission, ethical AI organization"
+        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }]}
+      />
       {/* Background Image */}
       <img src={Background} alt="Background" className="responsive-bg-image" loading="lazy" />
       
