@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import image from "../../images/Donate.webp";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SEO from '../SEO';
 const DonatePage = () => {
     useEffect(() => {
         AOS.init({
@@ -23,6 +24,13 @@ const DonatePage = () => {
 
   return (
     <main className="donate-page" data-aos="fade-up">
+      <SEO
+        title="Donate | RAI Alliance"
+        description="Support RAI Alliance’s mission to advance responsible AI through education and community programs."
+        path="/donate"
+        keywords="donate responsible AI, support RAI Alliance"
+        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Donate', path: '/donate' }]}
+      />
       <div className="donate-container">
         {/* Content Section */}
         <div className="donate-content">

@@ -5,6 +5,7 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import Instructor2 from '../../images/Instructor.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SEO from '../SEO';
 
 const teamMembers = [
   {
@@ -60,6 +61,13 @@ const OurTeam = () => {
 
   return (
     <main className='mt-[130px] p-3' data-aos="fade-up">
+      <SEO
+        title="Our Team | RAI Alliance"
+        description="Meet the team behind RAI Alliance working to advance responsible AI."
+        path="/team"
+        keywords="RAI Alliance team, responsible AI team, AI ethics team"
+        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Our Team', path: '/team' }]}
+      />
       <h1 className='text-center'>Our Team</h1>
       <p className='text-3xl text-center'>Meet the RAI team</p>
       <p className='text-center'>

@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SEO from '../SEO';
 const Events = () => {
   useEffect(() => {
     AOS.init({
@@ -58,6 +59,14 @@ const Events = () => {
 
   return (
     <div className="container mx-auto mt-[100px] p-5 font-sans" data-aos="fade-up">
+      <SEO
+        title="Blog | RAI Alliance"
+        description="Insights on responsible AI, ethics, and industry practices from RAI Alliance."
+        path="/blog"
+        keywords="responsible AI blog, AI ethics articles, trustworthy AI insights"
+        type="article"
+        breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }]}
+      />
       <h1 className="text-2xl font-bold">Insight from our team</h1>
       <p className="text-gray-600">Powerful Trading Tools and Features for Experienced Investors</p>
         
